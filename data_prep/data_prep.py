@@ -37,8 +37,8 @@ def OUTCAR_to_ms(parent_dir,sub_dirs=[''],run_types=['all'],flags=['OUTCAR']):
     ms = MultiSystems()
 
     #keep count of number of frames in each run type
-    counts_virial = {key: 0 for key in run_type}
-    counts_novirial = {key: 0 for key in run_type}
+    counts_virial = {key: 0 for key in run_types}
+    counts_novirial = {key: 0 for key in run_types}
 
     logs = []
 
@@ -49,42 +49,47 @@ def OUTCAR_to_ms(parent_dir,sub_dirs=[''],run_types=['all'],flags=['OUTCAR']):
 
         for r,d,f in os.walk(par):
             #extract information from path name 
-            run_type,system,conditions = r.split('/')[-4:]
+            # print(r)
+            system_info = r.split('/')[-4:]
 
             #define conditions for directory for extraction of OUTCAR
             hasflag = not set(flags).isdisjoint(f)
             isoutcar = 'OUTCAR' in f
+            isdense = not 'X' in system_info[-2]
 
             if 'all' in run_types:
                 inruntype=True
             else:
-                inruntype = run_type in run_types
+                inruntype = system_info[-3] in run_types
             
-            if isoutcar and hasflag and inruntype:
+            if isoutcar and hasflag and inruntype and isdense:
                 #get OUTCAR file path
                 file_path = os.path.join(r,'OUTCAR')
 
                 try:
                     #define labeled system with current OUTCAR
                     ls = LabeledSystem(file_path)
+
+                    #separates data with and without virial stresses 
+                    if 'virials' in ls.data.keys() and len(ls) > 0:
+                        ms_virial.append(ls)
+                        # print(counts_virial.keys())
+                        counts_virial[system_info[-3]]+=ls.get_nframes()
+                        logs.append(r)
+                    else:
+                        ms.append(ls)
+                        counts_novirial[system_info[-3]]+=ls.get_nframes()
+                        logs.append(r)
                 except:
-                    raise Warning(f'something is wrong with {r}')
+                    print(f'something is wrong with {r}')
                 
-                #separates data with and without virial stresses 
-                if 'virials' in ls.data.keys() and len(ls) > 0:
-                    ms_virial.append(ls)
-                    counts_virial[system]+=ls.get_nframes()
-                    logs.append(r)
-                else:
-                    ms.append(ls)
-                    counts_novirial[system]+=ls.get_nframes()
-                    logs.append(r)
+                
     return ms,ms_virial,counts_novirial,counts_virial
 #function for finding all non-training indices in splitting 
 def find_missing(sub_list,full_list):    
     return [x for x in range(1, full_list) if x not in sub_list]
 
-def train_test_split(destination_dir,train_split=0.9,ms_virial,ms):
+def train_test_split(destination_dir,ms_virial,ms,train_split=0.9):
     """scrubs destination dir for .npy files and splits into train-test sets
 
     Args:
@@ -186,9 +191,11 @@ def OUTCAR_to_npy(parent_dir,destination_dir,sub_dirs=[''],run_types=['all'],fla
     if not os.path.isdir(parent_dir):
         raise Exception("parent directory does not exist.")
     
-    ms,ms_virial = OUTCAR_to_ms(parent_dir=parent_dir,sub_dirs=sub_dirs,run_types=run_types,flags=flags)
+    ms,ms_virial,count_novirial,count_virial = OUTCAR_to_ms(parent_dir=parent_dir,sub_dirs=sub_dirs,run_types=run_types,flags=flags)
 
     train_test_split(destination_dir=destination_dir,train_split=train_split,ms_virial=ms_virial,ms=ms)
+    return ms,ms_virial,count_novirial,count_virial
 
-
+# %%
+OUTCAR_to_npy(parent_dir='/blue/subhash/share/B4C',destination_dir='/blue/subhash/kimia.gh/python_course/DeeperMD/data_prep/test',sub_dirs=['temperature_hold','small_strains'],run_types=['temperature_hold','shear_strain','volumetric_strain','uniaxial_strain'])
 # %%
