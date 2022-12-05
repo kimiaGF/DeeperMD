@@ -1,10 +1,9 @@
-#%%
+
 from dpdata import MultiSystems,LabeledSystem
 import os 
 import random
 import numpy as np
 import shutil
-#%%
 
 def OUTCAR_to_ms(parent_dir,sub_dirs=[''],run_types=['all'],flags=['OUTCAR']):
     """Converts OUTCAR files to MultiSystem objects
@@ -195,7 +194,3 @@ def OUTCAR_to_npy(parent_dir,destination_dir,sub_dirs=[''],run_types=['all'],fla
 
     train_test_split(destination_dir=destination_dir,train_split=train_split,ms_virial=ms_virial,ms=ms)
     return ms,ms_virial,count_novirial,count_virial
-
-# %%
-OUTCAR_to_npy(parent_dir='/blue/subhash/share/B4C',destination_dir='/blue/subhash/kimia.gh/python_course/DeeperMD/data_prep/test',sub_dirs=['temperature_hold','small_strains'],run_types=['temperature_hold','shear_strain','volumetric_strain','uniaxial_strain'])
-# %%
