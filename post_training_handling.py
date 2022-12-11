@@ -100,7 +100,7 @@ def compress(directory, frozen_model='graph.pb', \
 
 def test(directory, test_data, n, results = 'results',\
          frozen_model = 'graph.pb',compressed_model = 'graph-compress.pb',\
-             compressed = False):
+             compressed = False,multisystem=False):
     """
     Function evaluates the frozen and/or compressed model.
 
@@ -143,11 +143,20 @@ def test(directory, test_data, n, results = 'results',\
                                        cwd=directory,stdout=fout,stderr=ferr)
                         flag = 0
                         while flag<1:
-                            with open(Path(directory,'test.err')) as f:
-                                lines=f.readlines()
-                                if lines[-2].find('Virial RMSE/Natoms'):
-                                    flag=2
-                            time.sleep(5)
+                            if multisystem==False:
+                                with open(Path(directory,'test.err')) as f:
+                                    lines=f.readlines()
+                                    if lines[-2].find('Virial RMSE/Natoms'):
+                                        error=float(lines[-5].split()[5])
+                                        flag=2
+                                time.sleep(5)
+                            if multisystem==True:
+                                with open(Path(directory,'test.err')) as f:
+                                    lines=f.readlines()
+                                    if lines[-5].find('number of systems'):
+                                        error=float(lines[-4].split()[5])
+                                        flag=2
+                                time.sleep(5)
                 time.sleep(2)
             else:                           
                 raise ValueError("There is no 'frozen_model' path")
@@ -165,11 +174,20 @@ def test(directory, test_data, n, results = 'results',\
                                        cwd=directory,stdout=fout,stderr=ferr)
                         flag = 0
                         while flag<1:
-                            with open(Path(directory,'test.err')) as f:
-                                lines=f.readlines()
-                                if lines[-2].find('Virial RMSE/Natoms'):
-                                    flag=2
-                            time.sleep(5)
+                            if multisystem==False:
+                                with open(Path(directory,'test.err')) as f:
+                                    lines=f.readlines()
+                                    if lines[-2].find('Virial RMSE/Natoms'):
+                                        error=float(lines[-5].split()[5])
+                                        flag=2
+                                time.sleep(5)
+                            if multisystem==True:
+                                with open(Path(directory,'test.err')) as f:
+                                    lines=f.readlines()
+                                    if lines[-5].find('number of systems'):
+                                        error=float(lines[-4].split()[5])
+                                        flag=2
+                                time.sleep(5)
                 time.sleep(2)
             else:
                 raise ValueError("There is no 'frozen_model' path")
@@ -177,6 +195,7 @@ def test(directory, test_data, n, results = 'results',\
         else: 
             raise ValueError("'frozen_model' extension must be .pb")
         
+    return error
 
 
 def lammps_lat_const_modifier(model,data,lammps_script='in.lattice_constants',\
@@ -208,6 +227,7 @@ def lammps_lat_const_modifier(model,data,lammps_script='in.lattice_constants',\
 
     """
     if model.endswith('.pb')==True:
+        #key text words to search for in LAMMPS input script
         search_text=['boundary','units','read_data','pair_style']
         replace_text=[f"boundary {boundary} \n",f"units {units} \n",\
                       f"read_data {data} \n",f"pair_style deepmd {model} \n"]

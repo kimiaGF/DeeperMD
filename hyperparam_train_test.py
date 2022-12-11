@@ -12,11 +12,22 @@ import train
 import glob as glob
 import os 
 import numpy as np
+import logging
+
+logging.basicConfig(filename="hptraintest.log",
+                    format='%(asctime)s %(message)s',
+                    filemode='w')
+ 
+# Creating an object
+logger = logging.getLogger()
+ 
+# Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
 
 def hyperparam_train_test(directory,d1_dir,lammps_script,ref_len,ref_coh,\
-                          compression=False,crossval=True,\
+                          test_path,n,multisystem,compression=False,crossval=True,\
                               frozen_model='graph.pb',\
-                                  compressed_model='graph_compress.pb'):
+                                  compressed_model='graph-compress.pb'):
     """
     This function trains models using input json files that were created
     in order to perform a 1d hyperparameter optimization/evaluation study.
@@ -27,7 +38,7 @@ def hyperparam_train_test(directory,d1_dir,lammps_script,ref_len,ref_coh,\
 
     Parameters
     ----------
-    directory : ste
+    directory : str
         Parent directory, where script will be run.
     d1_dir : str
         directory name for 1d gridsearch.
@@ -37,6 +48,10 @@ def hyperparam_train_test(directory,d1_dir,lammps_script,ref_len,ref_coh,\
         Reference lattice constant.
     ref_coh : float
         Reference cohesive energy.
+    test_path : str
+        Path to test data.
+    n: integer
+        Amount of data points to test when testing models.
     compression : Bool, optional
         Whether model will be compressed. The default is False.
     crossval : Bool, optional
@@ -68,6 +83,7 @@ def hyperparam_train_test(directory,d1_dir,lammps_script,ref_len,ref_coh,\
                    \n{shortparams}\n\n")
                    #for loop that goes over each keyparam
         for keyparam in keyparams:
+            logger.info(f"Investigating key parameter : {os.path.split(keyparam)[1]}\n")
             file.write(f"Key parameter : {os.path.split(keyparam)[1]}\n")
             #individual models for each key
             models=glob.glob(os.path.join(keyparam,'*'))
@@ -77,8 +93,10 @@ def hyperparam_train_test(directory,d1_dir,lammps_script,ref_len,ref_coh,\
             cohesiveenergies=[]
             #looping through all models for a given key
             for model in models:
+                logger.info(f"Training model : {model}")
                 file.write(f"    Model = {os.path.split(model)[1]}\n")
                 if crossval==True:
+                    logger.info("Training using cross validation")
                     #sub models for kfold cross validation
                     kmodelpaths=glob.glob(os.path.join(model,'*'))
                     #new lists for kfold cross val
@@ -86,30 +104,38 @@ def hyperparam_train_test(directory,d1_dir,lammps_script,ref_len,ref_coh,\
                     kcohesiveenergies=[]
                     #training 'k' models, freezing them, compressing them 
                     #if necessary, and evaluating them in LAMMPS
-                    for kmodelpath in kmodelpaths:
+                    for i,kmodelpath in enumerate(kmodelpaths):
+                        logger.info(f"Training fold {i}")
                         input_json=glob.glob(os.path.join(kmodelpath,'*.json'))
                         if len(input_json)==1:
+                            logger.info("Training began")
                             train.train(input_script=input_json[0],directory=\
                                         kmodelpath)
+                            logger.info(f"Training completed for fold {i}")
+                            logger.info(f"Freezing model {model} fold {i}")
                             post_training_handling.freeze(directory=kmodelpath\
                                                 ,frozen_model=frozen_model)
+                            logger.info("Freezing complete")
                             if compression==False:
                                 lattice_constant,cohesive_energy=\
                                     post_training_handling.lattice_constants(\
                                     lammps_script=lammps_script,\
                                         directory=kmodelpath,ref_len=ref_len,\
                                             ref_coh=ref_coh)
+                                logger.info("Lattice constants calculated")
                                 klatticeconstants.append(lattice_constant)
                                 kcohesiveenergies.append(cohesive_energy)
                             elif compression==True:
                                 post_training_handling.compress(directory=\
                                     kmodelpath,frozen_model=frozen_model,\
                                         compressed_model=compressed_model)
+                                logger.info("Model compressed")
                                 lattice_constant,cohesive_energy=\
                                 post_training_handling.lattice_constants\
                                     (lammps_script=lammps_script,\
                                      directory=kmodelpath,\
                                          ref_len=ref_len, ref_coh=ref_coh)
+                                logger.info("Lattice constants calculated")
                                         #appending predictions
                                 klatticeconstants.append(lattice_constant)
                                 kcohesiveenergies.append(cohesive_energy)
@@ -127,40 +153,58 @@ def hyperparam_train_test(directory,d1_dir,lammps_script,ref_len,ref_coh,\
                         #if cross val is false, only one model will be trained
                         #for given training parameters, not 'k' models
                 elif crossval==False:
+                    logger.info("Training without cross validation")
                     #ensuring only one json file in each model folder,
                     #used to reduce overwriting results
                     input_json=glob.glob(os.path.join(model,'*.json'))
                     #training, freezing, comp (if necessary) and eval in 
                     #LAMMPS
                     if len(input_json)==1:
+                        logger.info(f"Training model : {model}")
                         train.train(input_script=input_json[0],directory=\
                                     model)
+                        logger.info("Training completed")
                         post_training_handling.freeze(directory=model,frozen_model=frozen_model)
+                        logger.info("Model frozen")
                         if compression==False:
                             lattice_constant,cohesive_energy=\
                                 post_training_handling.lattice_constants(\
                                 lammps_script=lammps_script,\
                                     directory=model,ref_len=ref_len,\
                                         ref_coh=ref_coh)
+                            logger.info("Lattice constants calculated")
+                            error=post_training_handling.test(directory=model,\
+                                test_data=test_path, frozen_model=frozen_model,\
+                                    compressed_model=compressed_model,n=n,compressed=False,\
+                                        multisystem=multisystem)
+                            logger.info("Error calculated")
                             latticeconstants.append(lattice_constant)
                             cohesiveenergies.append(cohesive_energy)
                         elif compression==True:
                             post_training_handling.compress(directory=\
                                 model,frozen_model=frozen_model,\
                                     compressed_model=compressed_model)
+                            logger.info("model compressed")
                             lattice_constant,cohesive_energy=\
                             post_training_handling.lattice_constants\
                                 (lammps_script=lammps_script,\
                                  directory=model,\
                                      ref_len=ref_len, ref_coh=ref_coh)
+                            logger.info("Lattice constants calculated")
+                            error=post_training_handling.test(directory=model,\
+                                test_data=test_path, n=n,frozen_model=frozen_model,\
+                                    compressed_model=compressed_model,compressed=True,\
+                                        multisystem=multisystem)
+                            logger.info("error calculated")
                             latticeconstants.append(lattice_constant)
                             cohesiveenergies.append(cohesive_energy)
                             latticeresidual=np.abs(lattice_constant-ref_len)
                             cohesiveresidual=np.abs(cohesive_energy-ref_coh)
+                        file.write(f"      Error = {error} meV\n")
                         file.write(f"      Lattice Constant = {lattice_constant}, residual = {latticeresidual}\n")
                         file.write(f"      Cohesive Energy = {cohesive_energy}, residual = {cohesiveresidual}\n")
                     else: 
                         raise ValueError('kfold directory should contain\
                                         only one .json file, currently\
                                             there is more than one.')
-            
+            logger.info("\n\n")
