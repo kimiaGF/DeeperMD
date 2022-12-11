@@ -1,0 +1,78 @@
+{
+    "model": {
+        "type_map": [
+            "Si",
+            "C"
+        ],
+        "type_embedding": {
+            "neuron": [
+                20,
+                20,
+                20
+            ],
+            "activation_function": "relu",
+            "trainable": true,
+            "seed": 1
+        },
+        "descriptor": {
+            "type": "se_e2_a",
+            "sel": "auto:1.5",
+            "rcut": 6.0,
+            "rcut_smth": 5.5,
+            "neuron": [
+                20,
+                40,
+                80
+            ],
+            "axis_neuron": 16,
+            "activation_function": "relu",
+            "trainable": true,
+            "seed": 1
+        },
+        "fitting_net": {
+            "type": "ener",
+            "neuron": [
+                160,
+                160,
+                160
+            ],
+            "activation_function": "relu",
+            "trainable": true,
+            "seed": 1
+        }
+    },
+    "learning_rate": {
+        "type": "exp",
+        "start_lr": 0.001,
+        "stop_lr": 3.51e-08,
+        "decay_steps": 500
+    },
+    "loss": {
+        "type": "ener",
+        "start_pref_e": 0.001,
+        "limit_pref_e": 1,
+        "start_pref_f": 10,
+        "limit_pref_f": 10
+    },
+    "training": {
+        "training_data": {
+            "systems": "/blue/subhash/michaelmacisaac/SiC/SiC_potential/data/tempdata/trainingdata"
+        },
+        "validation_data": {
+            "systems": "/blue/subhash/michaelmacisaac/SiC/SiC_potential/data/tempdata/validationdata"
+        },
+        "numb_steps": 100,
+        "seed": 1,
+        "disp_file": "lcurve.out",
+        "disp_freq": 100,
+        "save_freq": 1000,
+        "save_ckpt": "model_ckpt",
+        "disp_training": true,
+        "time_training": true,
+        "profiling": true,
+        "profiling_file": "profile",
+        "tensorboard": true,
+        "tensorboard_log_dir": "tensorboard_log_dir",
+        "tensorboard_freq": 500
+    }
+}
