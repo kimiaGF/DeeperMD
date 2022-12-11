@@ -98,9 +98,7 @@ def compress(directory, frozen_model='graph.pb', \
         print('Cannot compress model when using type embedding')
 
 
-def test(directory, test_data, n, results = 'results',\
-         frozen_model = 'graph.pb',compressed_model = 'graph-compress.pb',\
-             compressed = False,multisystem=False):
+def test(directory,model,test_data,n,results='results',multisystem=False):
     """
     Function evaluates the frozen and/or compressed model.
 
@@ -108,6 +106,8 @@ def test(directory, test_data, n, results = 'results',\
     ----------
     directory : str
         Path to model directory.
+    model : str
+        Name of model to be tested.
     test_data : str
         Path to test data.
     n : int
@@ -115,15 +115,8 @@ def test(directory, test_data, n, results = 'results',\
     results: str
         Name of results file(s) head, will have 'e.out', 'f.out', 
         and 'v.out' appended.
-    frozen_model : str, optional
-        Name of frozen model, the default is 'graph.pb'.
-    compressed_model : str, optional
-        Name of compressed model, the default is 
-        'graph-compress.pb'.
-    compressed : bool, optional
-        Specify whether model has been compressed following
-        model freezing, the default is 'False', assume model training employs
-        'type_embedding.'
+    multisystem: bool
+        Specify whether multiple systems will be evaluated,
 
     Returns
     -------
@@ -132,68 +125,34 @@ def test(directory, test_data, n, results = 'results',\
     directory following function execution.
 
     """
-    if compressed==False:
-        if frozen_model.endswith(".pb"):
-            if Path(Path(directory,frozen_model)).exists():
-                with open(Path(directory,"test.out"),"w+") as fout:
-                    with open(Path(directory,"test.err"),"w") as ferr:
-                        subprocess.run(["dp","test","-m", f"{frozen_model}",\
-                                        "-s",f"{test_data}","-n",f"{n}","-d",\
-                                        f"{results}"],\
-                                       cwd=directory,stdout=fout,stderr=ferr)
-                        flag = 0
-                        while flag<1:
-                            if multisystem==False:
-                                with open(Path(directory,'test.err')) as f:
-                                    lines=f.readlines()
-                                    if lines[-2].find('Virial RMSE/Natoms'):
-                                        error=float(lines[-5].split()[5])
-                                        flag=2
-                                time.sleep(5)
-                            if multisystem==True:
-                                with open(Path(directory,'test.err')) as f:
-                                    lines=f.readlines()
-                                    if lines[-5].find('number of systems'):
-                                        error=float(lines[-4].split()[5])
-                                        flag=2
-                                time.sleep(5)
-                time.sleep(2)
-            else:                           
-                raise ValueError("There is no 'frozen_model' path")
-        else:   
-            raise ValueError("'frozen_model' extension must be .pb")
-    elif compressed==True:
-        if compressed_model.endswith(".pb"):
-            if Path(Path(directory,compressed_model)).exists():
-                with open(Path(directory,"test.out"),"w+") as fout:
-                    with open(Path(directory,"test.err"),"w") as ferr:
-                        subprocess.run(["dp","test","-m",\
-                                        f"{compressed_model}","-s",\
-                                        f"{test_data}","-n",f"{n}","-d",\
-                                        f"{results}"],\
-                                       cwd=directory,stdout=fout,stderr=ferr)
-                        flag = 0
-                        while flag<1:
-                            if multisystem==False:
-                                with open(Path(directory,'test.err')) as f:
-                                    lines=f.readlines()
-                                    if lines[-2].find('Virial RMSE/Natoms'):
-                                        error=float(lines[-5].split()[5])
-                                        flag=2
-                                time.sleep(5)
-                            if multisystem==True:
-                                with open(Path(directory,'test.err')) as f:
-                                    lines=f.readlines()
-                                    if lines[-5].find('number of systems'):
-                                        error=float(lines[-4].split()[5])
-                                        flag=2
-                                time.sleep(5)
-                time.sleep(2)
-            else:
-                raise ValueError("There is no 'frozen_model' path")
-                
-        else: 
-            raise ValueError("'frozen_model' extension must be .pb")
+    if model.endswith(".pb"):
+        if Path(Path(directory,model)).exists():
+            with open(Path(directory,"test.out"),"w+") as fout:
+                with open(Path(directory,"test.err"),"w") as ferr:
+                    subprocess.run(["dp","test","-m", f"{model}","-s"\
+                        ,f"{test_data}","-n",f"{n}","-d",f"{results}"],\
+                                   cwd=directory,stdout=fout,stderr=ferr)
+                    flag = 0
+                    while flag<1:
+                        if multisystem==False:
+                            with open(Path(directory,'test.err')) as f:
+                                lines=f.readlines()
+                                if lines[-2].find('Virial RMSE/Natoms'):
+                                    error=float(lines[-5].split()[5])
+                                    flag=2
+                            time.sleep(5)
+                        if multisystem==True:
+                            with open(Path(directory,'test.err')) as f:
+                                lines=f.readlines()
+                                if lines[-5].find('number of systems'):
+                                    error=float(lines[-4].split()[5])
+                                    flag=2
+                            time.sleep(5)
+            time.sleep(2)
+        else:                           
+            raise ValueError("There is no 'frozen_model' path")
+    else:   
+        raise ValueError("'model' extension must be .pb")
         
     return error
 

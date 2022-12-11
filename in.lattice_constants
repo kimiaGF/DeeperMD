@@ -17,7 +17,7 @@ read_data /blue/subhash/michaelmacisaac/functions/deepmd/model1/data.b4c_cell
 #replicate 1 1 1
 
 # ---------- Define Interatomic Potential --------------------- 
-pair_style deepmd graph_compress.pb 
+pair_style deepmd graph.pb 
 pair_coeff * *
 neighbor 2.0 nsq 
 neigh_modify delay 10 check yes 
