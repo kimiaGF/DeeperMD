@@ -1,20 +1,9 @@
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Dec  1 23:24:49 2022
-
-@author: michaelmacisaac
-"""
 import os 
-import shutil
 import glob as glob
-from pathlib import Path
 import json
-import subprocess
 from functools import reduce
 import operator
-import train
 
 def data_path_gen(path_to_cval):
     """

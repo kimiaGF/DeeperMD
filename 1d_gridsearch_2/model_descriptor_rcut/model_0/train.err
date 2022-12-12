@@ -1,0 +1,27 @@
+WARNING:tensorflow:From /home/kimia.gh/.conda/envs/deepermd/lib/python3.10/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:root:To get the best performance, it is recommended to adjust the number of threads by setting the environment variables OMP_NUM_THREADS, TF_INTRA_OP_PARALLELISM_THREADS, and TF_INTER_OP_PARALLELISM_THREADS.
+Traceback (most recent call last):
+  File "/home/kimia.gh/.local/lib/python3.10/site-packages/deepmd/env.py", line 226, in get_module
+    module = tf.load_op_library(str(module_file))
+  File "/home/kimia.gh/.conda/envs/deepermd/lib/python3.10/site-packages/tensorflow/python/framework/load_library.py", line 54, in load_op_library
+    lib_handle = py_tf.TF_LoadLibrary(library_filename)
+tensorflow.python.framework.errors_impl.NotFoundError: /home/kimia.gh/.local/lib/python3.10/site-packages/deepmd/op/libop_abi.so: undefined symbol: _ZNK10tensorflow8OpKernel11TraceStringERKNS_15OpKernelContextEb
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kimia.gh/.conda/envs/deepermd/bin/dp", line 7, in <module>
+    from deepmd.entrypoints.main import main
+  File "/home/kimia.gh/.local/lib/python3.10/site-packages/deepmd/__init__.py", line 7, in <module>
+    import deepmd.utils.network as network
+  File "/home/kimia.gh/.local/lib/python3.10/site-packages/deepmd/utils/__init__.py", line 2, in <module>
+    from .data import DeepmdData
+  File "/home/kimia.gh/.local/lib/python3.10/site-packages/deepmd/utils/data.py", line 10, in <module>
+    from deepmd.env import GLOBAL_NP_FLOAT_PRECISION
+  File "/home/kimia.gh/.local/lib/python3.10/site-packages/deepmd/env.py", line 303, in <module>
+    op_module = get_module("libop_abi")
+  File "/home/kimia.gh/.local/lib/python3.10/site-packages/deepmd/env.py", line 236, in get_module
+    raise RuntimeError(
+RuntimeError: This deepmd-kit package was compiled with CXX11_ABI_FLAG=0, but TensorFlow runtime was compiled with CXX11_ABI_FLAG=1. These two library ABIs are incompatible and thus an error is raised when loading libop_abi. You need to rebuild deepmd-kit against this TensorFlow runtime.

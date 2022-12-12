@@ -1,0 +1,5 @@
+2022-12-11 18:38:32,816 Investigating key parameter : model_descriptor_rcut
+
+2022-12-11 18:38:32,817 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_0
+2022-12-11 18:38:32,817 Training without cross validation
+2022-12-11 18:38:32,818 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_0

@@ -1,14 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 22 14:49:39 2022
 
-@author: michaelmacisaac
-"""
 import subprocess 
 from pathlib import Path
-import fileinput
-import sys
 import time
 import numpy as np
 

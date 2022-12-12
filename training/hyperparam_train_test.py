@@ -1,14 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Dec  4 13:04:48 2022
-
-@author: michaelmacisaac
-"""
-
-import hyperparam_optimization
-import post_training_handling
-import train
+#%%
+from training.post_training_handling import freeze,compress,test,lattice_constants
+from training.train import train
 import json
 import glob as glob
 import os 
@@ -17,7 +9,7 @@ import logging
 from functools import reduce
 import operator
 import subprocess
-
+#%%
 def log_maker(file_name):
     """
     Function that makes logging file.
@@ -354,16 +346,16 @@ def hyperparam_train(directory,d1_dir,path_to_cval=None,gen_cval_data=True\
                         logger.info("Training began")
                         set_switcher(path_to_cval=path_to_cval\
                                      ,switch_set_index=i)
-                        train.train(input_script=input_json[0],directory=\
+                        train(input_script=input_json[0],directory=\
                                     kmodelpath)
                         logger.info(f"Training completed for fold {i}")
                         logger.info(f"Freezing model {model} fold {i}")
-                        post_training_handling.freeze(directory=kmodelpath\
+                        freeze(directory=kmodelpath\
                                             ,frozen_model=frozen_model)
                         logger.info("Freezing complete")
                         set_return(path_to_cval=path_to_cval)
                         if compression==True:
-                            post_training_handling.compress(directory=\
+                            compress(directory=\
                                 kmodelpath,frozen_model=frozen_model,\
                                     compressed_model=compressed_model)
                             logger.info("Model compressed")
@@ -382,13 +374,13 @@ def hyperparam_train(directory,d1_dir,path_to_cval=None,gen_cval_data=True\
                     if gen_cval_data==True:
                         logger.info(f"Training model : {model}")
                         set_switcher(path_to_cval=path_to_cval, switch_set_index=0)
-                        train.train(input_script=input_json[0],directory=\
+                        train(input_script=input_json[0],directory=\
                                     model)
                         logger.info("Training completed")
                         set_return(path_to_cval=path_to_cval)
                     elif gen_cval_data==False:
                         logger.info(f"Training model : {model}")
-                        train.train(input_script=input_json[0],directory=\
+                        train(input_script=input_json[0],directory=\
                                     model)
                         logger.info("Training completed")
                 else: 
@@ -396,11 +388,11 @@ def hyperparam_train(directory,d1_dir,path_to_cval=None,gen_cval_data=True\
                                     only one .json file, currently\
                                         there is more than one.')
                 logger.info(f"Freezing model {model}")
-                post_training_handling.freeze(directory=model\
+                freeze(directory=model\
                                     ,frozen_model=frozen_model)
                 logger.info("Freezing complete")
                 if compression==True:
-                    post_training_handling.compress(directory=\
+                    compress(directory=\
                         model,frozen_model=frozen_model,\
                             compressed_model=compressed_model)
                     logger.info("Model compressed")
@@ -468,7 +460,7 @@ def hyperparam_test(directory,d1_dir,param_dict,test_model,n,path_to_cval=None\
                         for i,kmodel in enumerate(kmodels):
                             set_switcher(path_to_cval=path_to_cval,switch_set_index=i)
                             test_path=os.path.join(path_to_cval,'valid')
-                            error=post_training_handling.test(directory=kmodel,\
+                            error=test(directory=kmodel,\
                                 test_data=test_path,model=test_model,n=n,\
                                         multisystem=multisystems)
                             crossvalerrors.append(error)
@@ -478,7 +470,7 @@ def hyperparam_test(directory,d1_dir,param_dict,test_model,n,path_to_cval=None\
                     elif crossval==False:
                         set_switcher(path_to_cval=path_to_cval,switch_set_index=0)
                         test_path=os.path.join(path_to_cval,'valid')
-                        error=post_training_handling.test(directory=subkeymodel,\
+                        error=test(directory=subkeymodel,\
                             test_data=test_path,model=test_model,n=n,\
                                     multisystem=multisystems)
                         file.write(f"  Error = {error}")
@@ -489,7 +481,7 @@ def hyperparam_test(directory,d1_dir,param_dict,test_model,n,path_to_cval=None\
                     if os.path.isdir(test_path)!=True:
                         raise ValueError('Provided test_path is not a\
                                          directory')
-                    error=post_training_handling.test(directory=subkeymodel,\
+                    error=test(directory=subkeymodel,\
                         test_data=test_path,model=test_model,n=n,\
                                 multisystem=multisystems)
                     file.write(f"  Error = {error}")
@@ -519,7 +511,7 @@ def hyperparam_lammps(directory,d1_dir,lammps_script,ref_len,ref_coh,crossval=No
                     kcohesiveenergies=[]
                     for i,kmodelpath in enumerate(kmodelpaths):
                         lattice_constant,cohesive_energy=\
-                            post_training_handling.lattice_constants(\
+                            lattice_constants(\
                             lammps_script=lammps_script,\
                                 directory=kmodelpath,ref_len=ref_len,\
                                     ref_coh=ref_coh)
@@ -534,7 +526,7 @@ def hyperparam_lammps(directory,d1_dir,lammps_script,ref_len,ref_coh,crossval=No
                         file.write(f"      Cohesive Energy = {cohesiveenergy}, residual = {cohesiveresidual}\n")
                 elif crossval==False:
                         lattice_constant,cohesive_energy=\
-                            post_training_handling.lattice_constants(\
+                            lattice_constants(\
                             lammps_script=lammps_script,\
                                 directory=model,ref_len=ref_len,\
                                     ref_coh=ref_coh)

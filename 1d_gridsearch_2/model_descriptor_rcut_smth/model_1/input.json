@@ -1,0 +1,65 @@
+{
+    "model": {
+        "type_map": [
+            "B",
+            "C"
+        ],
+        "descriptor": {
+            "type": "se_e2_a",
+            "sel": "auto:1.5",
+            "rcut": 8.0,
+            "rcut_smth": 4.5,
+            "neuron": [
+                50,
+                100
+            ],
+            "axis_neuron": 16,
+            "seed": 1
+        },
+        "fitting_net": {
+            "type": "ener",
+            "neuron": [
+                150,
+                150,
+                150
+            ],
+            "activation_function": "relu",
+            "seed": 1
+        }
+    },
+    "learning_rate": {
+        "type": "exp",
+        "start_lr": 0.001,
+        "stop_lr": 0.0001,
+        "decay_steps": 5
+    },
+    "loss": {
+        "type": "ener",
+        "start_pref_e": 1,
+        "limit_pref_e": 1,
+        "start_pref_f": 1000,
+        "limit_pref_f": 1000,
+        "start_pref_v": 5,
+        "limit_pref_v": 5
+    },
+    "training": {
+        "training_data": {
+            "systems": "/home/kimia.gh/blue2/python_course/test_03/virials/training_data"
+        },
+        "validation_data": {
+            "systems": "/home/kimia.gh/blue2/python_course/test_03/virials/validation_data"
+        },
+        "numb_steps": 100,
+        "seed": 1,
+        "disp_file": "lcurve.out",
+        "disp_freq": 10,
+        "save_freq": 10,
+        "save_ckpt": "model_ckpt",
+        "disp_training": true,
+        "profiling": true,
+        "profiling_file": "profile",
+        "tensorboard": true,
+        "tensorboard_log_dir": "tensorboard_log_dir",
+        "tensorboard_freq": 500
+    }
+}
