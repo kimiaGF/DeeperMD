@@ -1,0 +1,34 @@
+2022-12-11 21:52:10.295129: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+WARNING:tensorflow:From /home/kimia.gh/.conda/envs/deepmd/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:root:Environment variable KMP_BLOCKTIME is empty. Use the default value 0
+WARNING:root:Environment variable KMP_AFFINITY is empty. Use the default value granularity=fine,verbose,compact,1,0
+/home/kimia.gh/.conda/envs/deepmd/lib/python3.9/importlib/__init__.py:169: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  _bootstrap._exec(spec, module)
+DEEPMD INFO    Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+DEEPMD INFO    Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+DEEPMD INFO    NumExpr defaulting to 8 threads.
+2022-12-11 21:52:15.861045: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/slurm/lib64::
+2022-12-11 21:52:15.861237: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-12-11 21:52:15.861271: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (c0706a-s11.ufhpc): /proc/driver/nvidia/version does not exist
+2022-12-11 21:52:15.861684: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-11 21:52:15.881332: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+INFO:tensorflow:Restoring parameters from ./model_ckpt-100
+DEEPMD INFO    Restoring parameters from ./model_ckpt-100
+2022-12-11 21:52:16.094472: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 1996225000 Hz
+DEEPMD INFO    The following nodes will be frozen: ['model_type', 'descrpt_attr/rcut', 'descrpt_attr/ntypes', 'model_attr/tmap', 'model_attr/model_type', 'model_attr/model_version', 'train_attr/min_nbor_dist', 'train_attr/training_script', 'o_energy', 'o_force', 'o_virial', 'o_atom_energy', 'o_atom_virial', 'fitting_attr/dfparam', 'fitting_attr/daparam']
+WARNING:tensorflow:From /home/kimia.gh/.conda/envs/deepmd/lib/python3.9/site-packages/deepmd/entrypoints/freeze.py:202: convert_variables_to_constants (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.convert_variables_to_constants`
+DEEPMD WARNING From /home/kimia.gh/.conda/envs/deepmd/lib/python3.9/site-packages/deepmd/entrypoints/freeze.py:202: convert_variables_to_constants (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.convert_variables_to_constants`
+WARNING:tensorflow:From /home/kimia.gh/.conda/envs/deepmd/lib/python3.9/site-packages/tensorflow/python/framework/convert_to_constants.py:857: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.extract_sub_graph`
+DEEPMD WARNING From /home/kimia.gh/.conda/envs/deepmd/lib/python3.9/site-packages/tensorflow/python/framework/convert_to_constants.py:857: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.extract_sub_graph`
+DEEPMD INFO    1124 ops in the final graph.

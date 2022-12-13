@@ -1,0 +1,779 @@
+2022-12-11 21:42:44.299066: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+WARNING:tensorflow:From /home/kimia.gh/.conda/envs/deepmd/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:root:Environment variable KMP_BLOCKTIME is empty. Use the default value 0
+WARNING:root:Environment variable KMP_AFFINITY is empty. Use the default value granularity=fine,verbose,compact,1,0
+/home/kimia.gh/.conda/envs/deepmd/lib/python3.9/importlib/__init__.py:169: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  _bootstrap._exec(spec, module)
+2022-12-11 21:42:50.072345: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-11 21:42:50.107917: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/slurm/lib64::
+2022-12-11 21:42:50.107963: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2022-12-11 21:42:50.107984: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (c0706a-s11.ufhpc): /proc/driver/nvidia/version does not exist
+2022-12-11 21:42:50.108050: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2022-12-11 21:42:50.116365: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 1996225000 Hz
+OMP: Info #155: KMP_AFFINITY: Initial OS proc set respected: 0-127
+OMP: Info #216: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #157: KMP_AFFINITY: 128 available OS procs
+OMP: Info #158: KMP_AFFINITY: Uniform topology
+OMP: Info #287: KMP_AFFINITY: topology layer "LL cache" is equivalent to "socket".
+OMP: Info #192: KMP_AFFINITY: 2 sockets x 64 cores/socket x 1 thread/core (128 total cores)
+OMP: Info #218: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #172: KMP_AFFINITY: OS proc 0 maps to socket 0 core 0 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 1 maps to socket 0 core 1 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 2 maps to socket 0 core 2 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 3 maps to socket 0 core 3 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 4 maps to socket 0 core 4 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 5 maps to socket 0 core 5 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 6 maps to socket 0 core 6 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 7 maps to socket 0 core 7 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 8 maps to socket 0 core 8 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 9 maps to socket 0 core 9 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 10 maps to socket 0 core 10 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 11 maps to socket 0 core 11 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 12 maps to socket 0 core 12 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 13 maps to socket 0 core 13 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 14 maps to socket 0 core 14 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 15 maps to socket 0 core 15 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 16 maps to socket 0 core 16 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 17 maps to socket 0 core 17 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 18 maps to socket 0 core 18 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 19 maps to socket 0 core 19 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 20 maps to socket 0 core 20 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 21 maps to socket 0 core 21 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 22 maps to socket 0 core 22 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 23 maps to socket 0 core 23 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 24 maps to socket 0 core 24 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 25 maps to socket 0 core 25 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 26 maps to socket 0 core 26 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 27 maps to socket 0 core 27 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 28 maps to socket 0 core 28 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 29 maps to socket 0 core 29 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 30 maps to socket 0 core 30 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 31 maps to socket 0 core 31 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 32 maps to socket 0 core 32 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 33 maps to socket 0 core 33 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 34 maps to socket 0 core 34 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 35 maps to socket 0 core 35 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 36 maps to socket 0 core 36 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 37 maps to socket 0 core 37 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 38 maps to socket 0 core 38 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 39 maps to socket 0 core 39 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 40 maps to socket 0 core 40 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 41 maps to socket 0 core 41 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 42 maps to socket 0 core 42 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 43 maps to socket 0 core 43 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 44 maps to socket 0 core 44 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 45 maps to socket 0 core 45 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 46 maps to socket 0 core 46 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 47 maps to socket 0 core 47 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 48 maps to socket 0 core 48 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 49 maps to socket 0 core 49 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 50 maps to socket 0 core 50 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 51 maps to socket 0 core 51 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 52 maps to socket 0 core 52 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 53 maps to socket 0 core 53 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 54 maps to socket 0 core 54 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 55 maps to socket 0 core 55 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 56 maps to socket 0 core 56 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 57 maps to socket 0 core 57 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 58 maps to socket 0 core 58 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 59 maps to socket 0 core 59 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 60 maps to socket 0 core 60 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 61 maps to socket 0 core 61 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 62 maps to socket 0 core 62 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 63 maps to socket 0 core 63 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 64 maps to socket 1 core 0 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 65 maps to socket 1 core 1 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 66 maps to socket 1 core 2 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 67 maps to socket 1 core 3 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 68 maps to socket 1 core 4 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 69 maps to socket 1 core 5 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 70 maps to socket 1 core 6 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 71 maps to socket 1 core 7 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 72 maps to socket 1 core 8 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 73 maps to socket 1 core 9 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 74 maps to socket 1 core 10 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 75 maps to socket 1 core 11 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 76 maps to socket 1 core 12 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 77 maps to socket 1 core 13 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 78 maps to socket 1 core 14 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 79 maps to socket 1 core 15 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 80 maps to socket 1 core 16 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 81 maps to socket 1 core 17 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 82 maps to socket 1 core 18 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 83 maps to socket 1 core 19 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 84 maps to socket 1 core 20 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 85 maps to socket 1 core 21 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 86 maps to socket 1 core 22 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 87 maps to socket 1 core 23 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 88 maps to socket 1 core 24 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 89 maps to socket 1 core 25 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 90 maps to socket 1 core 26 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 91 maps to socket 1 core 27 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 92 maps to socket 1 core 28 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 93 maps to socket 1 core 29 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 94 maps to socket 1 core 30 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 95 maps to socket 1 core 31 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 96 maps to socket 1 core 32 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 97 maps to socket 1 core 33 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 98 maps to socket 1 core 34 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 99 maps to socket 1 core 35 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 100 maps to socket 1 core 36 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 101 maps to socket 1 core 37 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 102 maps to socket 1 core 38 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 103 maps to socket 1 core 39 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 104 maps to socket 1 core 40 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 105 maps to socket 1 core 41 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 106 maps to socket 1 core 42 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 107 maps to socket 1 core 43 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 108 maps to socket 1 core 44 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 109 maps to socket 1 core 45 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 110 maps to socket 1 core 46 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 111 maps to socket 1 core 47 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 112 maps to socket 1 core 48 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 113 maps to socket 1 core 49 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 114 maps to socket 1 core 50 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 115 maps to socket 1 core 51 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 116 maps to socket 1 core 52 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 117 maps to socket 1 core 53 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 118 maps to socket 1 core 54 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 119 maps to socket 1 core 55 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 120 maps to socket 1 core 56 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 121 maps to socket 1 core 57 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 122 maps to socket 1 core 58 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 123 maps to socket 1 core 59 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 124 maps to socket 1 core 60 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 125 maps to socket 1 core 61 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 126 maps to socket 1 core 62 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 127 maps to socket 1 core 63 thread 0 
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26383 thread 1 bound to OS proc set 1
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26385 thread 2 bound to OS proc set 2
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26386 thread 3 bound to OS proc set 3
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26387 thread 4 bound to OS proc set 4
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26389 thread 6 bound to OS proc set 6
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26388 thread 5 bound to OS proc set 5
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26391 thread 8 bound to OS proc set 8
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26390 thread 7 bound to OS proc set 7
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26392 thread 9 bound to OS proc set 9
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26393 thread 10 bound to OS proc set 10
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26394 thread 11 bound to OS proc set 11
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26396 thread 13 bound to OS proc set 13
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26395 thread 12 bound to OS proc set 12
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26397 thread 14 bound to OS proc set 14
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26398 thread 15 bound to OS proc set 15
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26399 thread 16 bound to OS proc set 16
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26400 thread 17 bound to OS proc set 17
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26401 thread 18 bound to OS proc set 18
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26402 thread 19 bound to OS proc set 19
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26403 thread 20 bound to OS proc set 20
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26404 thread 21 bound to OS proc set 21
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26405 thread 22 bound to OS proc set 22
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26406 thread 23 bound to OS proc set 23
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26407 thread 24 bound to OS proc set 24
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26408 thread 25 bound to OS proc set 25
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26409 thread 26 bound to OS proc set 26
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26410 thread 27 bound to OS proc set 27
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26411 thread 28 bound to OS proc set 28
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26412 thread 29 bound to OS proc set 29
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26413 thread 30 bound to OS proc set 30
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26414 thread 31 bound to OS proc set 31
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26415 thread 32 bound to OS proc set 32
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26416 thread 33 bound to OS proc set 33
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26417 thread 34 bound to OS proc set 34
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26418 thread 35 bound to OS proc set 35
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26419 thread 36 bound to OS proc set 36
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26420 thread 37 bound to OS proc set 37
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26422 thread 39 bound to OS proc set 39
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26421 thread 38 bound to OS proc set 38
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26423 thread 40 bound to OS proc set 40
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26424 thread 41 bound to OS proc set 41
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26425 thread 42 bound to OS proc set 42
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26426 thread 43 bound to OS proc set 43
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26427 thread 44 bound to OS proc set 44
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26428 thread 45 bound to OS proc set 45
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26429 thread 46 bound to OS proc set 46
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26430 thread 47 bound to OS proc set 47
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26431 thread 48 bound to OS proc set 48
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26432 thread 49 bound to OS proc set 49
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26433 thread 50 bound to OS proc set 50
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26434 thread 51 bound to OS proc set 51
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26435 thread 52 bound to OS proc set 52
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26436 thread 53 bound to OS proc set 53
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26437 thread 54 bound to OS proc set 54
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26438 thread 55 bound to OS proc set 55
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26439 thread 56 bound to OS proc set 56
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26440 thread 57 bound to OS proc set 57
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26441 thread 58 bound to OS proc set 58
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26442 thread 59 bound to OS proc set 59
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26443 thread 60 bound to OS proc set 60
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26444 thread 61 bound to OS proc set 61
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26445 thread 62 bound to OS proc set 62
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26446 thread 63 bound to OS proc set 63
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26447 thread 64 bound to OS proc set 64
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26448 thread 65 bound to OS proc set 65
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26449 thread 66 bound to OS proc set 66
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26450 thread 67 bound to OS proc set 67
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26451 thread 68 bound to OS proc set 68
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26452 thread 69 bound to OS proc set 69
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26453 thread 70 bound to OS proc set 70
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26454 thread 71 bound to OS proc set 71
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26455 thread 72 bound to OS proc set 72
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26456 thread 73 bound to OS proc set 73
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26457 thread 74 bound to OS proc set 74
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26458 thread 75 bound to OS proc set 75
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26459 thread 76 bound to OS proc set 76
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26460 thread 77 bound to OS proc set 77
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26461 thread 78 bound to OS proc set 78
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26462 thread 79 bound to OS proc set 79
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26463 thread 80 bound to OS proc set 80
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26464 thread 81 bound to OS proc set 81
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26465 thread 82 bound to OS proc set 82
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26466 thread 83 bound to OS proc set 83
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26467 thread 84 bound to OS proc set 84
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26468 thread 85 bound to OS proc set 85
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26469 thread 86 bound to OS proc set 86
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26470 thread 87 bound to OS proc set 87
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26471 thread 88 bound to OS proc set 88
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26472 thread 89 bound to OS proc set 89
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26473 thread 90 bound to OS proc set 90
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26474 thread 91 bound to OS proc set 91
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26475 thread 92 bound to OS proc set 92
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26476 thread 93 bound to OS proc set 93
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26477 thread 94 bound to OS proc set 94
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26478 thread 95 bound to OS proc set 95
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26480 thread 97 bound to OS proc set 97
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26479 thread 96 bound to OS proc set 96
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26481 thread 98 bound to OS proc set 98
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26482 thread 99 bound to OS proc set 99
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26483 thread 100 bound to OS proc set 100
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26484 thread 101 bound to OS proc set 101
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26485 thread 102 bound to OS proc set 102
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26486 thread 103 bound to OS proc set 103
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26487 thread 104 bound to OS proc set 104
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26488 thread 105 bound to OS proc set 105
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26489 thread 106 bound to OS proc set 106
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26490 thread 107 bound to OS proc set 107
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26491 thread 108 bound to OS proc set 108
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26492 thread 109 bound to OS proc set 109
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26493 thread 110 bound to OS proc set 110
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26494 thread 111 bound to OS proc set 111
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26495 thread 112 bound to OS proc set 112
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26496 thread 113 bound to OS proc set 113
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26497 thread 114 bound to OS proc set 114
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26498 thread 115 bound to OS proc set 115
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26499 thread 116 bound to OS proc set 116
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26500 thread 117 bound to OS proc set 117
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26501 thread 118 bound to OS proc set 118
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26502 thread 119 bound to OS proc set 119
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26503 thread 120 bound to OS proc set 120
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26504 thread 121 bound to OS proc set 121
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26505 thread 122 bound to OS proc set 122
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26506 thread 123 bound to OS proc set 123
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26507 thread 124 bound to OS proc set 124
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26508 thread 125 bound to OS proc set 125
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26509 thread 126 bound to OS proc set 126
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26510 thread 127 bound to OS proc set 127
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26511 thread 128 bound to OS proc set 0
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26382 thread 129 bound to OS proc set 1
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26512 thread 130 bound to OS proc set 2
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26513 thread 131 bound to OS proc set 3
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26514 thread 132 bound to OS proc set 4
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26516 thread 134 bound to OS proc set 6
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26515 thread 133 bound to OS proc set 5
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26519 thread 137 bound to OS proc set 9
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26518 thread 136 bound to OS proc set 8
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26517 thread 135 bound to OS proc set 7
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26521 thread 139 bound to OS proc set 11
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26520 thread 138 bound to OS proc set 10
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26522 thread 140 bound to OS proc set 12
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26524 thread 142 bound to OS proc set 14
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26523 thread 141 bound to OS proc set 13
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26525 thread 143 bound to OS proc set 15
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26526 thread 144 bound to OS proc set 16
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26527 thread 145 bound to OS proc set 17
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26528 thread 146 bound to OS proc set 18
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26529 thread 147 bound to OS proc set 19
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26530 thread 148 bound to OS proc set 20
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26532 thread 150 bound to OS proc set 22
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26531 thread 149 bound to OS proc set 21
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26533 thread 151 bound to OS proc set 23
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26534 thread 152 bound to OS proc set 24
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26535 thread 153 bound to OS proc set 25
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26537 thread 155 bound to OS proc set 27
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26536 thread 154 bound to OS proc set 26
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26538 thread 156 bound to OS proc set 28
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26539 thread 157 bound to OS proc set 29
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26540 thread 158 bound to OS proc set 30
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26541 thread 159 bound to OS proc set 31
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26542 thread 160 bound to OS proc set 32
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26543 thread 161 bound to OS proc set 33
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26544 thread 162 bound to OS proc set 34
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26545 thread 163 bound to OS proc set 35
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26546 thread 164 bound to OS proc set 36
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26547 thread 165 bound to OS proc set 37
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26548 thread 166 bound to OS proc set 38
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26549 thread 167 bound to OS proc set 39
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26550 thread 168 bound to OS proc set 40
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26551 thread 169 bound to OS proc set 41
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26552 thread 170 bound to OS proc set 42
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26553 thread 171 bound to OS proc set 43
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26554 thread 172 bound to OS proc set 44
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26555 thread 173 bound to OS proc set 45
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26556 thread 174 bound to OS proc set 46
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26557 thread 175 bound to OS proc set 47
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26558 thread 176 bound to OS proc set 48
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26560 thread 178 bound to OS proc set 50
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26559 thread 177 bound to OS proc set 49
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26562 thread 180 bound to OS proc set 52
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26564 thread 182 bound to OS proc set 54
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26561 thread 179 bound to OS proc set 51
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26567 thread 185 bound to OS proc set 57
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26565 thread 183 bound to OS proc set 55
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26569 thread 187 bound to OS proc set 59
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26568 thread 186 bound to OS proc set 58
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26570 thread 188 bound to OS proc set 60
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26571 thread 189 bound to OS proc set 61
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26572 thread 190 bound to OS proc set 62
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26573 thread 191 bound to OS proc set 63
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26574 thread 192 bound to OS proc set 64
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26575 thread 193 bound to OS proc set 65
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26576 thread 194 bound to OS proc set 66
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26577 thread 195 bound to OS proc set 67
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26578 thread 196 bound to OS proc set 68
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26579 thread 197 bound to OS proc set 69
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26566 thread 184 bound to OS proc set 56
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26580 thread 198 bound to OS proc set 70
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26563 thread 181 bound to OS proc set 53
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26582 thread 200 bound to OS proc set 72
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26581 thread 199 bound to OS proc set 71
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26583 thread 201 bound to OS proc set 73
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26584 thread 202 bound to OS proc set 74
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26585 thread 203 bound to OS proc set 75
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26586 thread 204 bound to OS proc set 76
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26587 thread 205 bound to OS proc set 77
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26589 thread 207 bound to OS proc set 79
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26590 thread 208 bound to OS proc set 80
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26591 thread 209 bound to OS proc set 81
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26592 thread 210 bound to OS proc set 82
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26593 thread 211 bound to OS proc set 83
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26594 thread 212 bound to OS proc set 84
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26596 thread 214 bound to OS proc set 86
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26595 thread 213 bound to OS proc set 85
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26597 thread 215 bound to OS proc set 87
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26598 thread 216 bound to OS proc set 88
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26599 thread 217 bound to OS proc set 89
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26600 thread 218 bound to OS proc set 90
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26601 thread 219 bound to OS proc set 91
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26602 thread 220 bound to OS proc set 92
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26588 thread 206 bound to OS proc set 78
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26603 thread 221 bound to OS proc set 93
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26604 thread 222 bound to OS proc set 94
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26605 thread 223 bound to OS proc set 95
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26606 thread 224 bound to OS proc set 96
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26609 thread 227 bound to OS proc set 99
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26608 thread 226 bound to OS proc set 98
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26607 thread 225 bound to OS proc set 97
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26610 thread 228 bound to OS proc set 100
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26611 thread 229 bound to OS proc set 101
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26612 thread 230 bound to OS proc set 102
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26613 thread 231 bound to OS proc set 103
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26614 thread 232 bound to OS proc set 104
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26615 thread 233 bound to OS proc set 105
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26616 thread 234 bound to OS proc set 106
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26617 thread 235 bound to OS proc set 107
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26618 thread 236 bound to OS proc set 108
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26619 thread 237 bound to OS proc set 109
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26620 thread 238 bound to OS proc set 110
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26621 thread 239 bound to OS proc set 111
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26622 thread 240 bound to OS proc set 112
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26623 thread 241 bound to OS proc set 113
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26624 thread 242 bound to OS proc set 114
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26625 thread 243 bound to OS proc set 115
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26626 thread 244 bound to OS proc set 116
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26628 thread 245 bound to OS proc set 117
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26629 thread 246 bound to OS proc set 118
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26630 thread 247 bound to OS proc set 119
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26631 thread 248 bound to OS proc set 120
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26632 thread 249 bound to OS proc set 121
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26633 thread 250 bound to OS proc set 122
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26634 thread 251 bound to OS proc set 123
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26635 thread 252 bound to OS proc set 124
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26636 thread 253 bound to OS proc set 125
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26637 thread 254 bound to OS proc set 126
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26638 thread 255 bound to OS proc set 127
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26639 thread 256 bound to OS proc set 0
+DEEPMD INFO    training data with min nbor dist: 1.2729312004282283
+DEEPMD INFO    training data with max nbor size: [263, 67]
+DEEPMD INFO     _____               _____   __  __  _____           _     _  _   
+DEEPMD INFO    |  __ \             |  __ \ |  \/  ||  __ \         | |   (_)| |  
+DEEPMD INFO    | |  | |  ___   ___ | |__) || \  / || |  | | ______ | | __ _ | |_ 
+DEEPMD INFO    | |  | | / _ \ / _ \|  ___/ | |\/| || |  | ||______|| |/ /| || __|
+DEEPMD INFO    | |__| ||  __/|  __/| |     | |  | || |__| |        |   < | || |_ 
+DEEPMD INFO    |_____/  \___| \___||_|     |_|  |_||_____/         |_|\_\|_| \__|
+DEEPMD INFO    Please read and cite:
+DEEPMD INFO    Wang, Zhang, Han and E, Comput.Phys.Comm. 228, 178-184 (2018)
+DEEPMD INFO    installed to:         /tmp/pip-req-build-i991qczn/_skbuild/linux-x86_64-3.9/cmake-install
+DEEPMD INFO    source :              v2.0.3
+DEEPMD INFO    source brach:         HEAD
+DEEPMD INFO    source commit:        159e45d2
+DEEPMD INFO    source commit at:     2021-10-15 10:31:09 +0800
+DEEPMD INFO    build float prec:     double
+DEEPMD INFO    build with tf inc:    /home/kimia.gh/.conda/envs/deepmd/lib/python3.9/site-packages/tensorflow/include
+DEEPMD INFO    build with tf lib:    
+DEEPMD INFO    ---Summary of the training---------------------------------------
+DEEPMD INFO    running on:           c0706a-s11.ufhpc
+DEEPMD INFO    computing device:     cpu:0
+DEEPMD INFO    CUDA_VISIBLE_DEVICES: unset
+DEEPMD INFO    Count of visible GPU: 0
+DEEPMD INFO    num_intra_threads:    0
+DEEPMD INFO    num_inter_threads:    0
+DEEPMD INFO    -----------------------------------------------------------------
+DEEPMD INFO    ---Summary of DataSystem: training     -----------------------------------------------
+DEEPMD INFO    found 2 system(s):
+DEEPMD INFO                                        system  natoms  bch_sz   n_bch   prob  pbc
+DEEPMD INFO    -- se/test_03/virials/training_data/B96C24     120       1     614  0.532    T
+DEEPMD INFO    -- e/test_03/virials/training_data/B104C16     120       1     540  0.468    T
+DEEPMD INFO    --------------------------------------------------------------------------------------
+DEEPMD INFO    ---Summary of DataSystem: validation   -----------------------------------------------
+DEEPMD INFO    found 2 system(s):
+DEEPMD INFO                                        system  natoms  bch_sz   n_bch   prob  pbc
+DEEPMD INFO    -- /test_03/virials/validation_data/B96C24     120       1      69  0.539    T
+DEEPMD INFO    -- test_03/virials/validation_data/B104C16     120       1      59  0.461    T
+DEEPMD INFO    --------------------------------------------------------------------------------------
+DEEPMD INFO    training without frame parameter
+OMP: Info #254: KMP_AFFINITY: pid 26020 tid 26020 thread 0 bound to OS proc set 0
+DEEPMD INFO    built lr
+DEEPMD INFO    built network
+DEEPMD INFO    built training
+DEEPMD INFO    initialize model from scratch
+DEEPMD INFO    start training at lr 1.00e-03 (== 1.00e-03), decay_step 5, decay_rate 0.891251, final lr will be 1.00e-04
+2022-12-11 21:43:37.859889: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:37.860470: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:38.799409: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:44.636872: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:44.637227: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:45.278659: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:45.332711: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:45.332848: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:45.963595: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:46.011273: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:46.011412: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:46.692482: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:46.740656: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:46.740787: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:47.384559: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:47.438323: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:47.438461: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:48.147761: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:48.192486: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:48.192654: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:48.835752: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:48.883357: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:48.883479: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:49.531697: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:49.577875: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:49.577994: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:50.207375: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:50.255107: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:50.255220: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:50.868181: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch      10 training time 19.21 s, testing time 0.60 s
+DEEPMD INFO    saved checkpoint model_ckpt
+2022-12-11 21:43:52.294634: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:52.294776: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:52.987165: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:53.043935: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:53.044114: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:53.722646: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:53.779628: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:53.779781: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:54.432550: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:54.483384: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:54.483513: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:55.194695: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:55.241083: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:55.241214: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:55.879957: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:55.932774: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:55.932896: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:56.615843: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:56.672611: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:56.672757: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:57.421640: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:57.473161: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:57.473321: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:58.107666: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:58.166451: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:58.166593: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:58.804873: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:43:58.867773: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:43:58.867928: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:43:59.605360: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch      20 training time 7.35 s, testing time 0.60 s
+DEEPMD INFO    saved checkpoint model_ckpt
+2022-12-11 21:44:00.881900: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:00.882034: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:01.489161: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:01.548925: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:01.549077: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:02.144952: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:02.199458: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:02.199631: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:02.981132: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:03.037264: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:03.037608: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:03.743425: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:03.805866: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:03.806069: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:04.478704: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:04.533432: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:04.533603: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:05.147506: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:05.208813: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:05.208950: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:05.887635: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:05.942593: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:05.942744: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:06.713298: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:06.768449: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:06.768610: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:07.433657: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:07.483476: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:07.483618: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:08.220079: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch      30 training time 7.37 s, testing time 0.58 s
+DEEPMD INFO    saved checkpoint model_ckpt
+2022-12-11 21:44:09.461983: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:09.462093: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:10.105813: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:10.168476: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:10.168657: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:10.861964: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:10.913547: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:10.913723: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:11.672122: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:11.724475: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:11.724615: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:12.421514: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:12.481724: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:12.481833: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:13.127564: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:13.178410: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:13.178563: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:13.814781: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:13.872530: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:13.872680: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:14.514562: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:14.566151: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:14.566294: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:15.290832: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:15.350505: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:15.350701: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:16.022384: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:16.084095: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:16.084243: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:16.691751: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch      40 training time 7.26 s, testing time 0.58 s
+DEEPMD INFO    saved checkpoint model_ckpt
+2022-12-11 21:44:17.948620: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:17.948716: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:18.598257: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:18.659677: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:18.659819: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:19.364105: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:19.417133: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:19.417273: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:20.027605: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:20.088616: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:20.088746: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:20.703672: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:20.759279: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:20.759410: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:21.376295: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:21.432412: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:21.432556: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:22.136521: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:22.189343: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:22.189479: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:22.799160: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:22.864272: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:22.864406: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:23.446282: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:23.502539: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:23.502684: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:24.135713: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:24.180030: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:24.180175: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:24.837896: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch      50 training time 6.92 s, testing time 0.57 s
+DEEPMD INFO    saved checkpoint model_ckpt
+2022-12-11 21:44:26.019339: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:26.019418: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:26.599352: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:26.656511: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:26.656662: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:27.262589: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:27.300077: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:27.300221: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:27.922848: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:27.973247: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:27.973401: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:28.629589: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:28.681053: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:28.681198: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:29.341514: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:29.386446: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:29.386588: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:30.012518: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:30.068743: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:30.068856: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:30.662695: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:30.701047: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:30.701158: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:31.344797: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:31.392104: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:31.392431: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:31.990845: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:32.042130: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:32.042260: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:32.692632: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch      60 training time 6.69 s, testing time 0.53 s
+WARNING:tensorflow:From /home/kimia.gh/.conda/envs/deepmd/lib/python3.9/site-packages/tensorflow/python/training/saver.py:969: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+DEEPMD WARNING From /home/kimia.gh/.conda/envs/deepmd/lib/python3.9/site-packages/tensorflow/python/training/saver.py:969: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+DEEPMD INFO    saved checkpoint model_ckpt
+2022-12-11 21:44:33.851696: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:33.851832: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:34.425109: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:34.479320: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:34.479476: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:35.078930: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:35.129241: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:35.129357: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:35.825639: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:35.873240: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:35.873376: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:36.505376: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:36.555284: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:36.555403: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:37.162148: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:37.210897: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:37.211015: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:37.808762: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:37.865715: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:37.865848: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:38.477230: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:38.533169: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:38.533305: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:39.116550: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:39.173458: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:39.173807: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:39.776629: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:39.831387: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:39.831538: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:40.473982: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch      70 training time 6.66 s, testing time 0.54 s
+DEEPMD INFO    saved checkpoint model_ckpt
+2022-12-11 21:44:41.691519: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:41.691677: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:42.251742: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:42.304392: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:42.304523: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:42.913025: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:42.966160: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:42.966257: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:43.565895: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:43.614301: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:43.614400: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:44.234965: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:44.287156: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:44.287291: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:44.866967: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:44.920674: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:44.920780: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:45.550874: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:45.591122: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:45.591253: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:46.223954: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:46.270130: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:46.270274: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:46.913657: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:46.961056: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:46.961190: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:47.652937: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:47.706323: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:47.706464: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:48.300264: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch      80 training time 6.65 s, testing time 0.54 s
+DEEPMD INFO    saved checkpoint model_ckpt
+2022-12-11 21:44:49.495424: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:49.495546: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:50.171347: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:50.218503: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:50.218641: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:50.865668: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:50.907206: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:50.907341: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:51.586661: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:51.632162: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:51.632266: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:52.220043: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:52.265472: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:52.265615: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:52.845399: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:52.890182: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:52.890307: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:53.474415: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:53.520138: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:53.520261: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:54.150855: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:54.194160: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:54.194295: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:54.878172: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:54.931397: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:54.931533: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:55.526322: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:55.575712: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:55.575862: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:56.153111: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch      90 training time 6.69 s, testing time 0.52 s
+DEEPMD INFO    saved checkpoint model_ckpt
+2022-12-11 21:44:57.263225: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:57.263305: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:57.853564: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:57.880826: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:57.880918: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:58.529156: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:58.556958: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:58.557050: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:59.145958: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:59.166697: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:59.166791: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:44:59.924004: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:44:59.964114: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:44:59.964216: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:45:00.515017: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:45:00.546758: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:45:00.546854: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:45:01.098645: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:45:01.127793: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:45:01.127888: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:45:01.800974: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:45:01.830554: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:45:01.830666: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:45:02.398077: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:45:02.419561: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:45:02.419645: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:45:02.909876: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+2022-12-11 21:45:02.935705: I tensorflow/core/profiler/lib/profiler_session.cc:126] Profiler session initializing.
+2022-12-11 21:45:02.935793: I tensorflow/core/profiler/lib/profiler_session.cc:141] Profiler session started.
+2022-12-11 21:45:03.588177: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session tear down.
+DEEPMD INFO    batch     100 training time 6.32 s, testing time 0.55 s
+DEEPMD INFO    saved checkpoint model_ckpt
+DEEPMD INFO    finished training
+DEEPMD INFO    wall time: 97.562 s

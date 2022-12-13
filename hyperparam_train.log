@@ -1,5 +1,42 @@
-2022-12-11 18:38:32,816 Investigating key parameter : model_descriptor_rcut
+2022-12-11 21:34:56,939 Investigating key parameter : model_descriptor_rcut
 
-2022-12-11 18:38:32,817 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_0
-2022-12-11 18:38:32,817 Training without cross validation
-2022-12-11 18:38:32,818 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_0
+2022-12-11 21:34:56,939 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_0
+2022-12-11 21:34:56,939 Training without cross validation
+2022-12-11 21:35:38,691 Investigating key parameter : model_descriptor_rcut
+
+2022-12-11 21:35:38,692 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_0
+2022-12-11 21:35:38,692 Training without cross validation
+2022-12-11 21:39:52,475 Investigating key parameter : model_descriptor_rcut
+
+2022-12-11 21:39:52,476 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_0
+2022-12-11 21:39:52,476 Training without cross validation
+2022-12-11 21:39:52,477 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_0
+2022-12-11 21:42:28,848 Training completed
+2022-12-11 21:42:28,848 Freezing model /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_0
+2022-12-11 21:42:43,532 Freezing complete
+2022-12-11 21:42:43,532 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_1
+2022-12-11 21:42:43,532 Training without cross validation
+2022-12-11 21:42:43,533 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_1
+2022-12-11 21:45:46,032 Training completed
+2022-12-11 21:45:46,032 Freezing model /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut/model_1
+2022-12-11 21:46:00,527 Freezing complete
+2022-12-11 21:46:00,528 
+
+
+2022-12-11 21:46:00,528 Investigating key parameter : model_descriptor_rcut_smth
+
+2022-12-11 21:46:00,528 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut_smth/model_0
+2022-12-11 21:46:00,528 Training without cross validation
+2022-12-11 21:46:00,529 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut_smth/model_0
+2022-12-11 21:48:58,048 Training completed
+2022-12-11 21:48:58,048 Freezing model /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut_smth/model_0
+2022-12-11 21:49:13,153 Freezing complete
+2022-12-11 21:49:13,154 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut_smth/model_1
+2022-12-11 21:49:13,154 Training without cross validation
+2022-12-11 21:49:13,154 Training model : /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut_smth/model_1
+2022-12-11 21:52:09,173 Training completed
+2022-12-11 21:52:09,173 Freezing model /home/kimia.gh/blue2/python_course/DeeperMD/1d_gridsearch_2/model_descriptor_rcut_smth/model_1
+2022-12-11 21:52:24,512 Freezing complete
+2022-12-11 21:52:24,513 
+
+
