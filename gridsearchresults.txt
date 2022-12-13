@@ -1,7 +1,0 @@
-Results of grid search, results are
-separated by                    parameter.
-Parameters evaluated in grid search were:                   
-['neuron', 'axis_neuron']
-
-Key parameter : neuron
-    Model = model_0
