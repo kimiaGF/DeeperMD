@@ -1,0 +1,698 @@
+[1648835440.170303] [c0907a-s17:141337:0]    ucp_context.c:1075 UCX  ERROR exceeded transports/devices limit (78 requested, up to 64 are supported)
+ running on    1 total cores
+ distrk:  each k-point on    1 cores,    1 groups
+ distr:  one band on    1 cores,    1 groups
+ OpenACC runtime initialized ...    1 GPUs detected
+ vasp.6.2.0 18Jan21 (build Feb 25 2021 07:51:20) complex                         
+ POSCAR found type information on POSCAR B C 
+ POSCAR found :  2 types and     112 ions
+ scaLAPACK will be used selectively (only on CPU)
+ LDA part: xc-table for Pade appr. of Perdew
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     The requested file  could not be found or opened for reading            |
+|     k-point information. Automatic k-point generation is used as a          |
+|     fallback, which may lead to unwanted results.                           |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.146775498483E+04    0.14678E+04   -0.20204E+05  1864   0.179E+03
+DAV:   2    -0.717437243389E+03   -0.21852E+04   -0.20609E+04  2308   0.325E+02
+DAV:   3    -0.843458918857E+03   -0.12602E+03   -0.12274E+03  2200   0.688E+01
+DAV:   4    -0.846000721306E+03   -0.25418E+01   -0.25291E+01  2160   0.102E+01
+DAV:   5    -0.846060226109E+03   -0.59505E-01   -0.59392E-01  2159   0.147E+00    0.436E+01
+RMM:   6    -0.798205428287E+03    0.47855E+02   -0.45372E+01  1864   0.102E+01    0.245E+01
+RMM:   7    -0.784808168570E+03    0.13397E+02   -0.42008E+01  1864   0.102E+01    0.602E+00
+RMM:   8    -0.784927376450E+03   -0.11921E+00   -0.41025E+00  1864   0.407E+00    0.267E+00
+RMM:   9    -0.785012549224E+03   -0.85173E-01   -0.47239E-01  1864   0.138E+00    0.975E-01
+RMM:  10    -0.784986306659E+03    0.26243E-01   -0.17802E-01  1864   0.709E-01    0.330E-01
+RMM:  11    -0.784986597373E+03   -0.29071E-03   -0.27747E-02  1868   0.302E-01    0.850E-02
+RMM:  12    -0.784987531359E+03   -0.93399E-03   -0.60655E-03  1890   0.122E-01    0.515E-02
+RMM:  13    -0.784987788484E+03   -0.25713E-03   -0.11464E-03  1870   0.590E-02    0.261E-02
+RMM:  14    -0.784987904345E+03   -0.11586E-03   -0.40304E-04  1865   0.306E-02    0.717E-03
+RMM:  15    -0.784987848927E+03    0.55418E-04   -0.86582E-05  1872   0.155E-02    0.901E-03
+RMM:  16    -0.784987904475E+03   -0.55548E-04   -0.17934E-05  1747   0.654E-03    0.327E-03
+RMM:  17    -0.784987911516E+03   -0.70416E-05   -0.37827E-06  1347   0.300E-03    0.193E-03
+RMM:  18    -0.784987908013E+03    0.35029E-05   -0.12960E-06  1186   0.179E-03    0.334E-04
+RMM:  19    -0.784987906450E+03    0.15633E-05   -0.22743E-07  1053   0.816E-04    0.309E-04
+RMM:  20    -0.784987910609E+03   -0.41586E-05   -0.33810E-08   576   0.391E-04    0.103E-04
+RMM:  21    -0.784987909482E+03    0.11267E-05   -0.73428E-09   493   0.358E-04    0.368E-05
+RMM:  22    -0.784987909209E+03    0.27301E-06    0.00000E+00   411   0.333E-04
+   1 F= -.78498791E+03 E0= -.78498791E+03  d E =-.784988E+03
+ curvature:   0.00 expect dE= 0.000E+00 dE for cont linesearch  0.000E+00
+ trial: gam= 0.00000 g(F)=  0.604E+00 g(S)=  0.207E+00 ort = 0.000E+00 (trialstep = 0.100E+01)
+ search vector abs. value=  0.811E+00
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785492520120E+03   -0.50461E+00   -0.48307E+01  2000   0.142E+01    0.266E+00
+RMM:   2    -0.785327880537E+03    0.16464E+00   -0.95129E-01  1864   0.215E+00    0.134E+00
+RMM:   3    -0.785316438214E+03    0.11442E-01   -0.27847E-01  1864   0.941E-01    0.463E-01
+RMM:   4    -0.785314647213E+03    0.17910E-02   -0.24508E-02  1871   0.346E-01    0.249E-01
+RMM:   5    -0.785316246764E+03   -0.15996E-02   -0.64856E-03  1873   0.158E-01    0.606E-02
+RMM:   6    -0.785315339696E+03    0.90707E-03   -0.96435E-04  1873   0.629E-02    0.424E-02
+RMM:   7    -0.785315179743E+03    0.15995E-03   -0.26088E-04  1884   0.292E-02    0.964E-03
+RMM:   8    -0.785315444841E+03   -0.26510E-03   -0.59186E-05  1878   0.123E-02    0.734E-03
+RMM:   9    -0.785315342720E+03    0.10212E-03   -0.10282E-05  1621   0.550E-03    0.211E-03
+RMM:  10    -0.785315321973E+03    0.20747E-04   -0.20011E-06  1254   0.227E-03    0.632E-04
+RMM:  11    -0.785315316249E+03    0.57240E-05   -0.37250E-07  1076   0.976E-04    0.153E-04
+RMM:  12    -0.785315315104E+03    0.11447E-05   -0.81740E-08   704   0.513E-04    0.528E-05
+RMM:  13    -0.785315314835E+03    0.26890E-06   -0.11141E-08   477   0.375E-04
+   2 F= -.78531531E+03 E0= -.78531531E+03  d E =-.327406E+00
+ trial-energy change:   -0.327406  1 .order   -0.340581   -0.811374    0.130212
+ step:   0.8511(harm=  0.8617)  dis= 0.01507  next Energy=  -785.325055 (dE=-0.337E+00)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785341598166E+03   -0.26283E-01   -0.10752E+00  2032   0.212E+00    0.392E-01
+RMM:   2    -0.785328877103E+03    0.12721E-01   -0.20754E-02  1864   0.319E-01    0.198E-01
+RMM:   3    -0.785325677955E+03    0.31991E-02   -0.55691E-03  1864   0.135E-01    0.659E-02
+RMM:   4    -0.785325765735E+03   -0.87780E-04   -0.55745E-04  1868   0.505E-02    0.320E-02
+RMM:   5    -0.785325821721E+03   -0.55986E-04   -0.12321E-04  1868   0.225E-02    0.654E-03
+RMM:   6    -0.785325831588E+03   -0.98663E-05   -0.19493E-05  1890   0.867E-03    0.473E-03
+RMM:   7    -0.785325905803E+03   -0.74215E-04   -0.45135E-06  1476   0.404E-03    0.126E-03
+RMM:   8    -0.785325869470E+03    0.36333E-04   -0.10176E-06  1175   0.164E-03    0.635E-04
+RMM:   9    -0.785325880993E+03   -0.11523E-04   -0.18942E-07  1005   0.767E-04    0.258E-04
+RMM:  10    -0.785325884115E+03   -0.31221E-05   -0.29700E-08   561   0.395E-04    0.689E-05
+RMM:  11    -0.785325884187E+03   -0.72477E-07   -0.60223E-10   397   0.334E-04
+   3 F= -.78532588E+03 E0= -.78532588E+03  d E =-.337975E+00
+ curvature:  -0.43 expect dE=-0.222E+00 dE for cont linesearch -0.744E-04
+ trial: gam= 0.62359 g(F)=  0.508E+00 g(S)=  0.972E-02 ort = 0.119E-01 (trialstep = 0.928E+00)
+ search vector abs. value=  0.848E+00
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785784344225E+03   -0.45846E+00   -0.47903E+01  1928   0.144E+01    0.241E+00
+RMM:   2    -0.785720811576E+03    0.63533E-01   -0.76141E-01  1864   0.192E+00    0.130E+00
+RMM:   3    -0.785693163082E+03    0.27648E-01   -0.16637E-01  1866   0.812E-01    0.414E-01
+RMM:   4    -0.785694786205E+03   -0.16231E-02   -0.22502E-02  1876   0.315E-01    0.221E-01
+RMM:   5    -0.785693443806E+03    0.13424E-02   -0.33938E-03  1867   0.130E-01    0.488E-02
+RMM:   6    -0.785694196278E+03   -0.75247E-03   -0.69536E-04  1881   0.509E-02    0.308E-02
+RMM:   7    -0.785694252193E+03   -0.55915E-04   -0.17878E-04  1871   0.251E-02    0.794E-03
+RMM:   8    -0.785694272787E+03   -0.20594E-04   -0.31331E-05  1878   0.103E-02    0.375E-03
+RMM:   9    -0.785694213729E+03    0.59058E-04   -0.90401E-06  1763   0.534E-03    0.153E-03
+RMM:  10    -0.785694219638E+03   -0.59098E-05   -0.18434E-06  1233   0.239E-03    0.533E-04
+RMM:  11    -0.785694212249E+03    0.73896E-05   -0.37191E-07  1091   0.105E-03    0.242E-04
+RMM:  12    -0.785694216163E+03   -0.39144E-05   -0.82442E-08   746   0.538E-04    0.662E-05
+RMM:  13    -0.785694216197E+03   -0.34043E-07   -0.11706E-08   492   0.375E-04
+   4 F= -.78569422E+03 E0= -.78569422E+03  d E =-.368332E+00
+ trial-energy change:   -0.368332  1 .order   -0.237096   -0.487494    0.013302
+ step:   0.9185(harm=  0.9035)  dis= 0.02234  next Energy=  -785.694285 (dE=-0.368E+00)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785692791897E+03    0.14243E-02   -0.51958E-03  2119   0.150E-01    0.245E-02
+RMM:   2    -0.785692674970E+03    0.11693E-03   -0.82009E-05  1864   0.198E-02    0.136E-02
+RMM:   3    -0.785692751578E+03   -0.76607E-04   -0.19781E-05  1865   0.867E-03    0.347E-03
+RMM:   4    -0.785692761573E+03   -0.99954E-05   -0.22973E-06  1206   0.326E-03    0.188E-03
+RMM:   5    -0.785692775092E+03   -0.13519E-04   -0.36555E-07  1069   0.126E-03    0.432E-04
+RMM:   6    -0.785692768583E+03    0.65094E-05   -0.53403E-08   694   0.518E-04    0.273E-04
+RMM:   7    -0.785692767665E+03    0.91774E-06   -0.47928E-09   369   0.354E-04
+   5 F= -.78569277E+03 E0= -.78569277E+03  d E =-.366883E+00
+ curvature:  -0.46 expect dE=-0.711E-01 dE for cont linesearch -0.441E-04
+ trial: gam= 0.37765 g(F)=  0.155E+00 g(S)=  0.352E-03 ort =-0.903E-02 (trialstep = 0.926E+00)
+ search vector abs. value=  0.269E+00
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785842266521E+03   -0.14950E+00   -0.15918E+01  1944   0.846E+00    0.175E+00
+RMM:   2    -0.785778647481E+03    0.63619E-01   -0.32269E-01  1864   0.116E+00    0.681E-01
+RMM:   3    -0.785780528509E+03   -0.18810E-02   -0.42066E-02  1864   0.428E-01    0.381E-01
+RMM:   4    -0.785782146123E+03   -0.16176E-02   -0.91739E-03  1870   0.185E-01    0.120E-01
+RMM:   5    -0.785781741736E+03    0.40439E-03   -0.10258E-03  1869   0.727E-02    0.310E-02
+RMM:   6    -0.785781725974E+03    0.15762E-04   -0.20541E-04  1889   0.288E-02    0.138E-02
+RMM:   7    -0.785781796759E+03   -0.70785E-04   -0.43528E-05  1871   0.126E-02    0.493E-03
+RMM:   8    -0.785781772194E+03    0.24564E-04   -0.87459E-06  1628   0.558E-03    0.182E-03
+RMM:   9    -0.785781763669E+03    0.85249E-05   -0.19150E-06  1239   0.264E-03    0.859E-04
+RMM:  10    -0.785781764671E+03   -0.10013E-05   -0.39867E-07  1093   0.112E-03    0.275E-04
+RMM:  11    -0.785781767802E+03   -0.31315E-05   -0.11273E-07   829   0.605E-04    0.106E-04
+RMM:  12    -0.785781767590E+03    0.21195E-06   -0.13637E-08   504   0.390E-04
+   6 F= -.78578177E+03 E0= -.78578177E+03  d E =-.889999E-01
+ trial-energy change:   -0.089000  1 .order   -0.075986   -0.140312   -0.011660
+ step:   0.9774(harm=  1.0101)  dis= 0.01604  next Energy=  -785.782092 (dE=-0.893E-01)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785781049233E+03    0.71857E-03   -0.49023E-02  2072   0.470E-01    0.824E-02
+RMM:   2    -0.785781253354E+03   -0.20412E-03   -0.81592E-04  1864   0.609E-02    0.367E-02
+RMM:   3    -0.785781343705E+03   -0.90350E-04   -0.13498E-04  1864   0.232E-02    0.185E-02
+RMM:   4    -0.785781357848E+03   -0.14144E-04   -0.22231E-05  1866   0.947E-03    0.644E-03
+RMM:   5    -0.785781331189E+03    0.26659E-04   -0.29053E-06  1281   0.392E-03    0.109E-03
+RMM:   6    -0.785781332124E+03   -0.93467E-06   -0.49388E-07  1149   0.140E-03
+   7 F= -.78578133E+03 E0= -.78578133E+03  d E =-.885645E-01
+ curvature:  -0.76 expect dE=-0.810E-01 dE for cont linesearch -0.106E-04
+ trial: gam= 1.10721 g(F)=  0.988E-01 g(S)=  0.773E-02 ort = 0.194E-02 (trialstep = 0.572E+00)
+ search vector abs. value=  0.441E+00
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785815306294E+03   -0.33975E-01   -0.92032E+00  1928   0.645E+00    0.112E+00
+RMM:   2    -0.785802475331E+03    0.12831E-01   -0.11805E-01  1864   0.748E-01    0.564E-01
+RMM:   3    -0.785801908294E+03    0.56704E-03   -0.29372E-02  1864   0.333E-01    0.190E-01
+RMM:   4    -0.785802190446E+03   -0.28215E-03   -0.35114E-03  1874   0.126E-01    0.864E-02
+RMM:   5    -0.785801824115E+03    0.36633E-03   -0.64992E-04  1867   0.556E-02    0.200E-02
+RMM:   6    -0.785801898657E+03   -0.74542E-04   -0.10637E-04  1889   0.205E-02    0.141E-02
+RMM:   7    -0.785801936377E+03   -0.37720E-04   -0.26297E-05  1866   0.986E-03    0.276E-03
+RMM:   8    -0.785801906760E+03    0.29617E-04   -0.52433E-06  1485   0.407E-03    0.260E-03
+RMM:   9    -0.785801902227E+03    0.45329E-05   -0.12790E-06  1192   0.195E-03    0.664E-04
+RMM:  10    -0.785801907577E+03   -0.53498E-05   -0.26840E-07  1044   0.854E-04    0.342E-04
+RMM:  11    -0.785801907576E+03    0.11339E-08   -0.55026E-08   658   0.442E-04
+   8 F= -.78580191E+03 E0= -.78580191E+03  d E =-.205755E-01
+ trial-energy change:   -0.020575  1 .order   -0.029700   -0.062144    0.002745
+ step:   0.4862(harm=  0.5476)  dis= 0.00976  next Energy=  -785.802144 (dE=-0.208E-01)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785805376019E+03   -0.34684E-02   -0.20766E-01  1962   0.969E-01    0.162E-01
+RMM:   2    -0.785804745384E+03    0.63063E-03   -0.26261E-03  1864   0.111E-01    0.813E-02
+RMM:   3    -0.785804361919E+03    0.38347E-03   -0.61283E-04  1864   0.482E-02    0.296E-02
+RMM:   4    -0.785804336868E+03    0.25051E-04   -0.82335E-05  1872   0.190E-02    0.129E-02
+RMM:   5    -0.785804412572E+03   -0.75704E-04   -0.15564E-05  1868   0.841E-03    0.260E-03
+RMM:   6    -0.785804399599E+03    0.12973E-04   -0.23969E-06  1255   0.311E-03    0.186E-03
+RMM:   7    -0.785804391393E+03    0.82060E-05   -0.55921E-07  1146   0.139E-03    0.410E-04
+RMM:   8    -0.785804395597E+03   -0.42042E-05   -0.90303E-08   795   0.578E-04    0.227E-04
+RMM:   9    -0.785804398385E+03   -0.27878E-05   -0.24084E-08   557   0.423E-04    0.950E-05
+RMM:  10    -0.785804397181E+03    0.12046E-05    0.00000E+00   361   0.329E-04    0.244E-05
+RMM:  11    -0.785804397063E+03    0.11720E-06    0.00000E+00   338   0.328E-04
+   9 F= -.78580440E+03 E0= -.78580440E+03  d E =-.230649E-01
+ curvature:   6.04 expect dE= 0.419E+00 dE for cont linesearch  0.349E-02
+ ZBRENT: interpolating
+ opt :   0.5519  next Energy=  -785.801955 (dE=-0.206E-01)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785802042899E+03    0.23543E-02   -0.12256E-01  1948   0.744E-01    0.123E-01
+RMM:   2    -0.785802343646E+03   -0.30075E-03   -0.15344E-03  1864   0.852E-02    0.634E-02
+RMM:   3    -0.785802583635E+03   -0.23999E-03   -0.39327E-04  1864   0.383E-02    0.200E-02
+RMM:   4    -0.785802570400E+03    0.13235E-04   -0.43850E-05  1874   0.143E-02    0.934E-03
+RMM:   5    -0.785802523939E+03    0.46460E-04   -0.89398E-06  1847   0.649E-03    0.211E-03
+RMM:   6    -0.785802532924E+03   -0.89852E-05   -0.14262E-06  1191   0.239E-03    0.157E-03
+RMM:   7    -0.785802537249E+03   -0.43242E-05   -0.33808E-07  1134   0.107E-03    0.305E-04
+RMM:   8    -0.785802534297E+03    0.29520E-05   -0.54416E-08   668   0.480E-04    0.230E-04
+RMM:   9    -0.785802532490E+03    0.18066E-05   -0.88381E-09   456   0.395E-04    0.690E-05
+RMM:  10    -0.785802533256E+03   -0.76549E-06   -0.17806E-10   356   0.348E-04
+  10 F= -.78580253E+03 E0= -.78580253E+03  d E =-.212011E-01
+ curvature:  -0.08 expect dE=-0.584E-02 dE for cont linesearch -0.566E-08
+ trial: gam= 0.16182 g(F)=  0.657E-01 g(S)=  0.531E-02 ort = 0.174E-03 (trialstep = 0.568E+00)
+ search vector abs. value=  0.826E-01
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785825150349E+03   -0.22618E-01   -0.13417E+00  1912   0.242E+00    0.438E-01
+RMM:   2    -0.785818267420E+03    0.68829E-02   -0.46740E-02  1864   0.472E-01    0.209E-01
+RMM:   3    -0.785818210325E+03    0.57095E-04   -0.60214E-03  1864   0.160E-01    0.107E-01
+RMM:   4    -0.785818296958E+03   -0.86632E-04   -0.15143E-03  1869   0.699E-02    0.272E-02
+RMM:   5    -0.785818272080E+03    0.24877E-04   -0.14441E-04  1867   0.255E-02    0.919E-03
+RMM:   6    -0.785818282136E+03   -0.10055E-04   -0.39044E-05  1868   0.108E-02    0.452E-03
+RMM:   7    -0.785818282302E+03   -0.16677E-06   -0.56295E-06  1460   0.426E-03
+  11 F= -.78581828E+03 E0= -.78581828E+03  d E =-.157490E-01
+ trial-energy change:   -0.015749  1 .order   -0.021888   -0.040310   -0.003466
+ step:   0.6212(harm=  0.6212)  dis= 0.00377  next Energy=  -785.824585 (dE=-0.221E-01)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785817916506E+03    0.36563E-03   -0.11935E-02  2048   0.229E-01    0.419E-02
+RMM:   2    -0.785817948145E+03   -0.31639E-04   -0.43091E-04  1864   0.451E-02    0.198E-02
+RMM:   3    -0.785817977029E+03   -0.28883E-04   -0.55690E-05  1865   0.154E-02    0.101E-02
+RMM:   4    -0.785817991604E+03   -0.14575E-04   -0.14080E-05  1863   0.673E-03    0.253E-03
+RMM:   5    -0.785817989211E+03    0.23931E-05   -0.14133E-06  1189   0.248E-03    0.902E-04
+RMM:   6    -0.785817989806E+03   -0.59535E-06   -0.30669E-07  1111   0.993E-04
+  12 F= -.78581799E+03 E0= -.78581799E+03  d E =-.154566E-01
+ curvature:  -0.36 expect dE=-0.101E-01 dE for cont linesearch -0.156E-07
+ trial: gam= 0.36333 g(F)=  0.272E-01 g(S)=  0.726E-03 ort = 0.597E-04 (trialstep = 0.578E+00)
+ search vector abs. value=  0.389E-01
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785818667970E+03   -0.67876E-03   -0.59774E-01  1915   0.159E+00    0.228E-01
+RMM:   2    -0.785818738603E+03   -0.70633E-04   -0.11791E-02  1864   0.249E-01    0.112E-01
+RMM:   3    -0.785819759641E+03   -0.10210E-02   -0.43846E-03  1864   0.109E-01    0.360E-02
+RMM:   4    -0.785819484673E+03    0.27497E-03   -0.34296E-04  1875   0.400E-02    0.235E-02
+RMM:   5    -0.785819420658E+03    0.64016E-04   -0.70337E-05  1866   0.171E-02    0.573E-03
+RMM:   6    -0.785819456821E+03   -0.36163E-04   -0.11340E-05  1837   0.644E-03    0.254E-03
+RMM:   7    -0.785819467009E+03   -0.10188E-04   -0.33918E-06  1367   0.289E-03    0.127E-03
+RMM:   8    -0.785819460978E+03    0.60314E-05   -0.44642E-07  1145   0.116E-03    0.639E-04
+RMM:   9    -0.785819456944E+03    0.40339E-05   -0.10181E-07   800   0.600E-04    0.228E-04
+RMM:  10    -0.785819453972E+03    0.29716E-05   -0.75463E-08   770   0.495E-04    0.115E-04
+RMM:  11    -0.785819455385E+03   -0.14125E-05   -0.85108E-10   373   0.269E-04    0.348E-05
+RMM:  12    -0.785819455867E+03   -0.48199E-06    0.00000E+00   341   0.264E-04
+  13 F= -.78581946E+03 E0= -.78581946E+03  d E =-.146606E-02
+ trial-energy change:   -0.001466  1 .order   -0.008160   -0.016157   -0.000163
+ step:   0.5844(harm=  0.5844)  dis= 0.00250  next Energy=  -785.826151 (dE=-0.816E-02)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785819362394E+03    0.92991E-04   -0.62153E-05  2070   0.162E-02    0.232E-03
+RMM:   2    -0.785819381559E+03   -0.19165E-04   -0.12481E-06  1061   0.255E-03    0.113E-03
+RMM:   3    -0.785819393912E+03   -0.12353E-04   -0.39794E-07  1027   0.104E-03    0.356E-04
+RMM:   4    -0.785819391806E+03    0.21064E-05   -0.56704E-09   313   0.389E-04    0.215E-04
+RMM:   5    -0.785819390704E+03    0.11023E-05   -0.13800E-10   191   0.372E-04    0.263E-05
+RMM:   6    -0.785819391098E+03   -0.39431E-06    0.00000E+00   171   0.368E-04
+  14 F= -.78581939E+03 E0= -.78581939E+03  d E =-.140129E-02
+ curvature:  -0.41 expect dE=-0.103E-02 dE for cont linesearch -0.106E-09
+ trial: gam= 0.07979 g(F)=  0.199E-02 g(S)=  0.528E-03 ort = 0.319E-05 (trialstep = 0.580E+00)
+ search vector abs. value=  0.277E-02
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785819852961E+03   -0.46226E-03   -0.38710E-02  1989   0.432E-01    0.689E-02
+RMM:   2    -0.785819940102E+03   -0.87141E-04   -0.53892E-04  1864   0.496E-02    0.364E-02
+RMM:   3    -0.785820071865E+03   -0.13176E-03   -0.14726E-04  1865   0.222E-02    0.127E-02
+RMM:   4    -0.785820062082E+03    0.97826E-05   -0.16010E-05  1871   0.815E-03    0.596E-03
+RMM:   5    -0.785820037752E+03    0.24330E-04   -0.32481E-06  1322   0.356E-03    0.116E-03
+RMM:   6    -0.785820042309E+03   -0.45568E-05   -0.54565E-07  1142   0.139E-03    0.829E-04
+RMM:   7    -0.785820042508E+03   -0.19886E-06   -0.11337E-07   817   0.614E-04
+  15 F= -.78582004E+03 E0= -.78582004E+03  d E =-.651410E-03
+ trial-energy change:   -0.000651  1 .order   -0.000879   -0.001462   -0.000296
+ step:   0.7270(harm=  0.7270)  dis= 0.00066  next Energy=  -785.820308 (dE=-0.917E-03)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785819984395E+03    0.57914E-04   -0.25037E-03  2088   0.110E-01    0.175E-02
+RMM:   2    -0.785820018135E+03   -0.33741E-04   -0.34981E-05  1864   0.127E-02    0.922E-03
+RMM:   3    -0.785820054126E+03   -0.35991E-04   -0.96018E-06  1854   0.567E-03    0.322E-03
+RMM:   4    -0.785820051446E+03    0.26799E-05   -0.10580E-06  1138   0.208E-03    0.158E-03
+RMM:   5    -0.785820045110E+03    0.63366E-05   -0.21480E-07  1075   0.873E-04    0.269E-04
+RMM:   6    -0.785820046352E+03   -0.12422E-05   -0.14489E-08   429   0.356E-04    0.181E-04
+RMM:   7    -0.785820047028E+03   -0.67637E-06   -0.99014E-10   292   0.341E-04
+  16 F= -.78582005E+03 E0= -.78582005E+03  d E =-.655930E-03
+ curvature:  -0.40 expect dE=-0.177E-03 dE for cont linesearch -0.996E-08
+ trial: gam= 0.18001 g(F)=  0.366E-03 g(S)=  0.788E-04 ort =-0.831E-05 (trialstep = 0.609E+00)
+ search vector abs. value=  0.531E-03
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785820195908E+03   -0.14956E-03   -0.93526E-03  1938   0.204E-01    0.438E-02
+RMM:   2    -0.785820256537E+03   -0.60629E-04   -0.31097E-04  1864   0.370E-02    0.215E-02
+RMM:   3    -0.785820255868E+03    0.66931E-06   -0.37631E-05  1866   0.128E-02    0.113E-02
+RMM:   4    -0.785820255095E+03    0.77282E-06   -0.10652E-05  1856   0.597E-03    0.144E-03
+RMM:   5    -0.785820259227E+03   -0.41320E-05   -0.11578E-06  1146   0.214E-03    0.904E-04
+RMM:   6    -0.785820261646E+03   -0.24192E-05   -0.21145E-07  1090   0.858E-04    0.355E-04
+RMM:   7    -0.785820261367E+03    0.27975E-06   -0.28529E-08   503   0.396E-04
+  17 F= -.78582026E+03 E0= -.78582026E+03  d E =-.214338E-03
+ trial-energy change:   -0.000214  1 .order   -0.000114   -0.000270    0.000042
+ step:   0.5799(harm=  0.5263)  dis= 0.00025  next Energy=  -785.820262 (dE=-0.215E-03)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785820263975E+03   -0.23287E-05   -0.21549E-05  2080   0.976E-03    0.213E-03
+RMM:   2    -0.785820257822E+03    0.61525E-05   -0.76324E-07   979   0.181E-03    0.104E-03
+RMM:   3    -0.785820257653E+03    0.16996E-06   -0.64121E-08   722   0.597E-04
+  18 F= -.78582026E+03 E0= -.78582026E+03  d E =-.210624E-03
+ curvature:  -0.18 expect dE=-0.143E-04 dE for cont linesearch -0.796E-06
+ trial: gam= 0.28171 g(F)=  0.526E-04 g(S)=  0.254E-04 ort =-0.481E-04 (trialstep = 0.603E+00)
+ search vector abs. value=  0.931E-04
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785820005533E+03    0.25229E-03   -0.21659E-03  1962   0.982E-02    0.142E-02
+RMM:   2    -0.785820033283E+03   -0.27750E-04   -0.24282E-05  1864   0.109E-02    0.790E-03
+RMM:   3    -0.785820056281E+03   -0.22997E-04   -0.52981E-06  1786   0.468E-03    0.171E-03
+RMM:   4    -0.785820053987E+03    0.22936E-05   -0.62403E-07  1124   0.175E-03    0.806E-04
+RMM:   5    -0.785820053053E+03    0.93414E-06   -0.10310E-07   855   0.679E-04
+  19 F= -.78582005E+03 E0= -.78582005E+03  d E =0.204600E-03
+ trial-energy change:    0.000205  1 .order   -0.000023   -0.000039   -0.000008
+ step:   0.7603(harm=  0.7603)  dis= 0.00019  next Energy=  -785.820282 (dE=-0.245E-04)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785819981559E+03    0.72428E-04   -0.14763E-04  2080   0.256E-02    0.374E-03
+RMM:   2    -0.785819989390E+03   -0.78307E-05   -0.17475E-06  1145   0.292E-03    0.208E-03
+RMM:   3    -0.785819995685E+03   -0.62953E-05   -0.34342E-07   982   0.119E-03    0.470E-04
+RMM:   4    -0.785819995054E+03    0.63100E-06   -0.17407E-08   401   0.454E-04
+  20 F= -.78582000E+03 E0= -.78582000E+03  d E =0.262598E-03
+ curvature:  -0.55 expect dE=-0.205E-04 dE for cont linesearch -0.178E-08
+ trial: gam= 0.24927 g(F)=  0.230E-04 g(S)=  0.144E-04 ort = 0.549E-06 (trialstep = 0.635E+00)
+ search vector abs. value=  0.435E-04
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785820024136E+03   -0.28451E-04   -0.11616E-03  1914   0.705E-02    0.134E-02
+RMM:   2    -0.785819978435E+03    0.45701E-04   -0.19110E-05  1863   0.952E-03    0.755E-03
+RMM:   3    -0.785819956212E+03    0.22223E-04   -0.52095E-06  1753   0.427E-03    0.194E-03
+RMM:   4    -0.785819960715E+03   -0.45037E-05   -0.56959E-07  1073   0.158E-03    0.919E-04
+RMM:   5    -0.785819964051E+03   -0.33358E-05   -0.71037E-08   853   0.576E-04    0.203E-04
+RMM:   6    -0.785819963772E+03    0.27937E-06   -0.20412E-09   313   0.326E-04
+  21 F= -.78581996E+03 E0= -.78581996E+03  d E =0.312821E-04
+ trial-energy change:    0.000031  1 .order   -0.000011   -0.000024    0.000002
+ step:   0.5801(harm=  0.5801)  dis= 0.00011  next Energy=  -785.820006 (dE=-0.109E-04)
+ bond charge predicted
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.785819962512E+03    0.15393E-05   -0.84968E-06  1832   0.606E-03    0.115E-03
+RMM:   2    -0.785819966130E+03   -0.36180E-05   -0.17620E-07   943   0.933E-04    0.645E-04
+RMM:   3    -0.785819967682E+03   -0.15517E-05   -0.63593E-09   246   0.363E-04    0.224E-04
+RMM:   4    -0.785819968305E+03   -0.62291E-06   -0.25389E-09   172   0.382E-04
+  22 F= -.78581997E+03 E0= -.78581997E+03  d E =0.267494E-04
+ curvature:  -0.34 expect dE=-0.390E-05 dE for cont linesearch -0.114E-07
+ trial: gam= 0.35841 g(F)=  0.116E-04 g(S)=  0.173E-07 ort =-0.122E-05 (trialstep = 0.624E+00)
+ search vector abs. value=  0.163E-04
+ reached required accuracy - stopping structural energy minimisation
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     Tetrahedron method does not include variations of the Fermi             |
+|     occupations, so forces and stress will be inaccurate. We suggest        |
+|     using a different smearing scheme ISMEAR = 1 or 2 for metals in         |
+|     relaxations.                                                            |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+Warning: ieee_invalid is signaling
+Warning: ieee_divide_by_zero is signaling
+Warning: ieee_underflow is signaling
+Warning: ieee_inexact is signaling
+FORTRAN STOP

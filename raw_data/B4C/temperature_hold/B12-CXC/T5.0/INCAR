@@ -1,0 +1,18 @@
+ALGO = Fast
+PREC = Accurate
+ENCUT = 700
+ISMEAR = -5
+SIGMA = 0.05
+ISYM = 0
+
+LREAL = Auto
+LWAVE = False
+LCHARGE = False
+
+IBRION = 0
+SMASS = 0
+POTIM = 0.5
+NSW = 100
+
+TEBEG = 5.0
+TEEND = 5

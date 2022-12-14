@@ -1,0 +1,12 @@
+ALGO = Fast
+PREC = Accurate
+EDIFF = 1E-6
+ENCUT = 700
+ISMEAR = -5
+IBRION = 2
+ISIF = 4
+LREAL = Auto
+LWAVE = False
+LCHARGE = False
+NSW = 300
+SIGMA = 0.05

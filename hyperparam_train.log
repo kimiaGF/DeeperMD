@@ -1,0 +1,15 @@
+2022-12-13 21:07:38,047 Investigating key parameter : model_descriptor_axis_neuron
+
+2022-12-13 21:07:38,048 Training model : /blue/subhash/kimia.gh/python_course/Final_project/1d_gridsearch/model_descriptor_axis_neuron/model_0
+2022-12-13 21:07:38,048 Training using cross validation
+2022-12-13 21:07:38,048 Training fold 0
+2022-12-13 21:07:38,049 Training began
+2022-12-13 21:09:03,012 Training completed for fold 0
+2022-12-13 21:09:03,012 Freezing model /blue/subhash/kimia.gh/python_course/Final_project/1d_gridsearch/model_descriptor_axis_neuron/model_0 fold 0
+2022-12-13 21:09:18,238 Freezing complete
+2022-12-13 21:09:42,271 Investigating key parameter : model_descriptor_axis_neuron
+
+2022-12-13 21:09:42,272 Training model : /blue/subhash/kimia.gh/python_course/Final_project/1d_gridsearch/model_descriptor_axis_neuron/model_0
+2022-12-13 21:09:42,272 Training using cross validation
+2022-12-13 21:09:42,273 Training fold 0
+2022-12-13 21:09:42,273 Training began
