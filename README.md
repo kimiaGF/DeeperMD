@@ -9,7 +9,7 @@ This package builds on the features provided in the Machine learning interatomic
 </div>
 
 ## Data Preparation Sub-Package
-Separated into two modules: `process_data` and `cross_val`
+Separated into two modules: `process_data` and `gen_cval_data`
 
 This subpackage reads in DFT data (currently only OUTCARs supported), and processes them for use in ML-based potentials. 
 #### process_data
